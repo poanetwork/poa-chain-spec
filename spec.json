@@ -6,7 +6,11 @@
         "stepDuration": "5",
         "blockReward": "0xDE0B6B3A7640000",
         "validators": {
-          "safeContract": "0xf472e0e43570b9afaab67089615080cf7c20018d"
+          "multi": {
+            "0": {
+              "safeContract": "0xf472e0e43570b9afaab67089615080cf7c20018d"
+            }
+          }
         }
       }
     }
