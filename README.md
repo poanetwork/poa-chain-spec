@@ -4,9 +4,9 @@ Each network must have branch with `chain.json` and tools. Tools should be in `s
 
 ## Network IDs
 
-77 - Sokol (testnet)
-78 - RED (pre-mainnet, testnet for redteam)
-99 - POA (mainnet)
+- 77 - Sokol (testnet)
+- 78 - RED (pre-mainnet, testnet for redteam)
+- 99 - POA (mainnet)
 
 ## Contribution guides
 
