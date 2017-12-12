@@ -10,9 +10,12 @@ Each network must have branch with `chain.json` and tools. Tools should be in `s
 
 ## Contribution guides
 
-Modification of `chain.json` file without an approved PR is prohibited.
+Modification of `chain.json` file without an approved PR is prohibited. 
+
 List of approvers:
 
 - Igor Barinov
 - Viktor Baranov
 - Pavel Khahulin
+- Roman Storm
+
