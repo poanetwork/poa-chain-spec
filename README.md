@@ -1,12 +1,13 @@
-# chain.json for POA Network
+# chain.json for POA Network isntances
 
 Each network must have branch with `chain.json` and tools. Tools should be in `script` directory.
 
 ## Network IDs
 
-- 77 - Sokol (testnet)
-- 78 - RED (pre-mainnet, testnet for redteam)
-- 99 - POA (mainnet)
+- 99 - Core, livenet
+- 77 - Sokol, testnet
+- 78 - Red, testnet for security testing
+
 
 ## Contribution guides
 
@@ -18,4 +19,3 @@ List of approvers:
 - Viktor Baranov
 - Pavel Khahulin
 - Roman Storm
-
