@@ -1,5 +1,5 @@
 {
-  "name": "sokol",
+  "name": "Sokol",
   "engine": {
     "authorityRound": {
       "params": {
@@ -13,7 +13,7 @@
           }
         },
         "maximumUncleCountTransition": 0,
-	      "maximumUncleCount": 0
+	"maximumUncleCount": 0
       }
     }
   },
@@ -21,7 +21,7 @@
     "gasLimitBoundDivisor": "0x400",
     "maximumExtraDataSize": "0x20",
     "minGasLimit": "0x1388",
-    "networkID": "0xC0FFEE",
+    "networkID": "77",
     
     "eip140Transition": "0x0",
     "eip211Transition": "0x0",
@@ -36,7 +36,7 @@
       }
     },
     "difficulty": "0x20000",
-    "gasLimit": "0x663BE0"
+    "gasLimit": "0x7A1200"
   },
   "accounts": {
     "0000000000000000000000000000000000000005": { "builtin": { "name": "modexp", "activate_at": "0x0", "pricing": { "modexp": { "divisor": 20 } } } },
