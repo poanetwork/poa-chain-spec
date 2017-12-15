@@ -1,0 +1,14 @@
+ADDRESSES:
+ VotingToChangeKeys.address 0x145a3d3bd5db8a0ad863b4949b6088d133726cdb 
+
+    VotingToChangeMinThreshold.address 0xad623f870298774765bc5e56ebeafac721028867 
+
+    VotingToChangeProxyAddress.address 0x6fb85b2030a68a76ab237d2392b09e28e6f03fa9 
+
+    BallotsStorage.address 0x1e0eaa06d02f965be2dfe0bc9ff52b2d82133461 
+
+    KeysManager.address 0x88a34124bfffa27ef3e052c8dd2908e212643771 
+
+    ValidatorMetadata.address 0xfda8a3536aa1bb69073259d305fd22fcec368b71 
+
+    ProxyStorage.address 0x862d67cb0773ee3f8ce7ea89b328ffea861ab3ef 
