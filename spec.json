@@ -3,7 +3,7 @@
   "engine": {
     "authorityRound": {
       "params": {
-        "stepDuration": "5",
+        "stepDuration": 5,
         "blockReward": "0xDE0B6B3A7640000",
         "maximumUncleCountTransition": 0,
         "maximumUncleCount": 0,
@@ -13,7 +13,9 @@
               "safeContract": "0x8bf38d4764929064f2d4d3a56520a76ab3df415b"
             }
           }
-        }
+        },
+        "maximumUncleCountTransition": 0,
+	"maximumUncleCount": 0
       }
     }
   },
@@ -21,8 +23,7 @@
     "gasLimitBoundDivisor": "0x400",
     "maximumExtraDataSize": "0x20",
     "minGasLimit": "0x1388",
-    "networkID": "0x4D",
-    
+    "networkID": "0x4D",    
     "eip140Transition": "0x0",
     "eip211Transition": "0x0",
     "eip214Transition": "0x0",
@@ -36,7 +37,7 @@
       }
     },
     "difficulty": "0x20000",
-    "gasLimit": "0x663BE0"
+    "gasLimit": "0x7A1200"
   },
   "accounts": {
     "0000000000000000000000000000000000000005": { "builtin": { "name": "modexp", "activate_at": "0x0", "pricing": { "modexp": { "divisor": 20 } } } },
