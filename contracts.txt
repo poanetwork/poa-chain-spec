@@ -1,3 +1,4 @@
+ADDRESSES:
  VotingToChangeKeys.address 0x145a3d3bd5db8a0ad863b4949b6088d133726cdb 
 
     VotingToChangeMinThreshold.address 0xad623f870298774765bc5e56ebeafac721028867 
@@ -11,4 +12,3 @@
     ValidatorMetadata.address 0xfda8a3536aa1bb69073259d305fd22fcec368b71 
 
     ProxyStorage.address 0x862d67cb0773ee3f8ce7ea89b328ffea861ab3ef 
-
