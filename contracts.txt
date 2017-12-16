@@ -1,14 +1,14 @@
 ADDRESSES:
- VotingToChangeKeys.address 0x145a3d3bd5db8a0ad863b4949b6088d133726cdb 
+ VotingToChangeKeys.address 0x49df4ec19243263e5db22da5865b4f482b8323a0 
 
-    VotingToChangeMinThreshold.address 0xad623f870298774765bc5e56ebeafac721028867 
+    VotingToChangeMinThreshold.address 0x8829ebe113535826e8af17ed51f83755f675789a 
 
-    VotingToChangeProxyAddress.address 0x6fb85b2030a68a76ab237d2392b09e28e6f03fa9 
+    VotingToChangeProxyAddress.address 0x6b728399b41a38d4109f7af2213d4cc31ca87812 
 
-    BallotsStorage.address 0x1e0eaa06d02f965be2dfe0bc9ff52b2d82133461 
+    BallotsStorage.address 0x0d7590c7aedf1e7e85fc9a1ee88f6f17d3ba762f 
 
-    KeysManager.address 0x88a34124bfffa27ef3e052c8dd2908e212643771 
+    KeysManager.address 0xfc90125492e58dbfe80c0bfb6a2a759c4f703ca8 
 
-    ValidatorMetadata.address 0xfda8a3536aa1bb69073259d305fd22fcec368b71 
+    ValidatorMetadata.address 0xa1b344ee240564f61117f2dbf999547ad4b871ed 
 
-    ProxyStorage.address 0x862d67cb0773ee3f8ce7ea89b328ffea861ab3ef 
+    ProxyStorage.address 0x0985eb35bd7b5ecd1d88de34ceae174627f058b6 
