@@ -9,6 +9,6 @@ ADDRESSES:
 
     KeysManager.address 0xfc90125492e58dbfe80c0bfb6a2a759c4f703ca8 
 
-    ValidatorMetadata.address 0xa1b344ee240564f61117f2dbf999547ad4b871ed 
+    ValidatorMetadata.address 0xcBB2912666c7e8023B7ec78B6842702eB26336aC 
 
     ProxyStorage.address 0x0985eb35bd7b5ecd1d88de34ceae174627f058b6 
