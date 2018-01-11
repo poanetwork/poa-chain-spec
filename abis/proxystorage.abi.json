@@ -1,0 +1,241 @@
+[
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getVotingToChangeProxy",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_keysManager",
+        "type": "address"
+      },
+      {
+        "name": "_votingToChangeKeys",
+        "type": "address"
+      },
+      {
+        "name": "_votingToChangeMinThreshold",
+        "type": "address"
+      },
+      {
+        "name": "_votingToChangeProxy",
+        "type": "address"
+      },
+      {
+        "name": "_ballotsStorage",
+        "type": "address"
+      }
+    ],
+    "name": "initializeAddresses",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getBallotsStorage",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getVotingToChangeKeys",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "mocInitialized",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getPoaConsensus",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getKeysManager",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "contractVersion",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getVotingToChangeMinThreshold",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_contractType",
+        "type": "uint256"
+      },
+      {
+        "name": "_contractAddress",
+        "type": "address"
+      }
+    ],
+    "name": "setContractAddress",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_validator",
+        "type": "address"
+      }
+    ],
+    "name": "isValidator",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_poaConsensus",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "keysManager",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "votingToChangeKeys",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "votingToChangeMinThreshold",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "votingToChangeProxy",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "ballotsStorage",
+        "type": "address"
+      }
+    ],
+    "name": "ProxyInitialized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "contractType",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "contractAddress",
+        "type": "address"
+      }
+    ],
+    "name": "AddressSet",
+    "type": "event"
+  }
+]
