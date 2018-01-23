@@ -242,6 +242,25 @@
         "type": "uint256"
       }
     ],
+    "name": "getMemo",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
     "name": "isActive",
     "outputs": [
       {
@@ -285,40 +304,6 @@
     "type": "function"
   },
   {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_startTime",
-        "type": "uint256"
-      },
-      {
-        "name": "_endTime",
-        "type": "uint256"
-      },
-      {
-        "name": "_affectedKey",
-        "type": "address"
-      },
-      {
-        "name": "_affectedKeyType",
-        "type": "uint256"
-      },
-      {
-        "name": "_miningKey",
-        "type": "address"
-      },
-      {
-        "name": "_ballotType",
-        "type": "uint256"
-      }
-    ],
-    "name": "createVotingForKeys",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "constant": true,
     "inputs": [
       {
@@ -354,6 +339,44 @@
     ],
     "payable": false,
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_startTime",
+        "type": "uint256"
+      },
+      {
+        "name": "_endTime",
+        "type": "uint256"
+      },
+      {
+        "name": "_affectedKey",
+        "type": "address"
+      },
+      {
+        "name": "_affectedKeyType",
+        "type": "uint256"
+      },
+      {
+        "name": "_miningKey",
+        "type": "address"
+      },
+      {
+        "name": "_ballotType",
+        "type": "uint256"
+      },
+      {
+        "name": "memo",
+        "type": "string"
+      }
+    ],
+    "name": "createVotingForKeys",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -660,6 +683,10 @@
       {
         "name": "creator",
         "type": "address"
+      },
+      {
+        "name": "memo",
+        "type": "string"
       }
     ],
     "payable": false,

@@ -14,6 +14,32 @@
     "type": "function"
   },
   {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_startTime",
+        "type": "uint256"
+      },
+      {
+        "name": "_endTime",
+        "type": "uint256"
+      },
+      {
+        "name": "_proposedValue",
+        "type": "uint256"
+      },
+      {
+        "name": "memo",
+        "type": "string"
+      }
+    ],
+    "name": "createBallotToChangeThreshold",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "constant": true,
     "inputs": [
       {
@@ -181,6 +207,25 @@
         "type": "uint256"
       }
     ],
+    "name": "getMemo",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
     "name": "isActive",
     "outputs": [
       {
@@ -190,28 +235,6 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_startTime",
-        "type": "uint256"
-      },
-      {
-        "name": "_endTime",
-        "type": "uint256"
-      },
-      {
-        "name": "_proposedValue",
-        "type": "uint256"
-      }
-    ],
-    "name": "createBallotToChangeThreshold",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -525,6 +548,10 @@
       {
         "name": "creator",
         "type": "address"
+      },
+      {
+        "name": "memo",
+        "type": "string"
       }
     ],
     "payable": false,

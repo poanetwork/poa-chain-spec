@@ -52,9 +52,13 @@
       {
         "name": "_validator",
         "type": "address"
+      },
+      {
+        "name": "_shouldFireEvent",
+        "type": "bool"
       }
     ],
-    "name": "removeValidator",
+    "name": "addValidator",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
@@ -127,13 +131,8 @@
   },
   {
     "constant": false,
-    "inputs": [
-      {
-        "name": "_validator",
-        "type": "address"
-      }
-    ],
-    "name": "addValidator",
+    "inputs": [],
+    "name": "finalizeChange",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
@@ -141,8 +140,17 @@
   },
   {
     "constant": false,
-    "inputs": [],
-    "name": "finalizeChange",
+    "inputs": [
+      {
+        "name": "_newKey",
+        "type": "address"
+      },
+      {
+        "name": "_oldKey",
+        "type": "address"
+      }
+    ],
+    "name": "swapValidatorKey",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
@@ -249,6 +257,24 @@
     ],
     "payable": false,
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_validator",
+        "type": "address"
+      },
+      {
+        "name": "_shouldFireEvent",
+        "type": "bool"
+      }
+    ],
+    "name": "removeValidator",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {

@@ -89,32 +89,6 @@
     "type": "function"
   },
   {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_startTime",
-        "type": "uint256"
-      },
-      {
-        "name": "_endTime",
-        "type": "uint256"
-      },
-      {
-        "name": "_proposedValue",
-        "type": "address"
-      },
-      {
-        "name": "_contractType",
-        "type": "uint8"
-      }
-    ],
-    "name": "createBallotToChangeProxyAddress",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "constant": true,
     "inputs": [
       {
@@ -145,6 +119,36 @@
     ],
     "payable": false,
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_startTime",
+        "type": "uint256"
+      },
+      {
+        "name": "_endTime",
+        "type": "uint256"
+      },
+      {
+        "name": "_proposedValue",
+        "type": "address"
+      },
+      {
+        "name": "_contractType",
+        "type": "uint8"
+      },
+      {
+        "name": "memo",
+        "type": "string"
+      }
+    ],
+    "name": "createBallotToChangeProxyAddress",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -193,6 +197,25 @@
       {
         "name": "",
         "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "getMemo",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
       }
     ],
     "payable": false,
@@ -552,6 +575,10 @@
       {
         "name": "creator",
         "type": "address"
+      },
+      {
+        "name": "memo",
+        "type": "string"
       }
     ],
     "payable": false,
