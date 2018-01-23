@@ -11,6 +11,9 @@
           "multi": {
             "0": {
               "safeContract": "0x8bf38d4764929064f2d4d3a56520a76ab3df415b"
+            },
+            "772000": {
+              "safeContract": "0x83451c8bc04d4ee9745ccc58edfab88037bc48cc"
             }
           }
         }
