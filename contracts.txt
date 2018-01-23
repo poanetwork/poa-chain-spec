@@ -1,14 +1,10 @@
 ADDRESSES:
- VotingToChangeKeys.address 0x49df4ec19243263e5db22da5865b4f482b8323a0 
 
-    VotingToChangeMinThreshold.address 0x8829ebe113535826e8af17ed51f83755f675789a 
-
-    VotingToChangeProxyAddress.address 0x6b728399b41a38d4109f7af2213d4cc31ca87812 
-
-    BallotsStorage.address 0x0d7590c7aedf1e7e85fc9a1ee88f6f17d3ba762f 
-
-    KeysManager.address 0xfc90125492e58dbfe80c0bfb6a2a759c4f703ca8 
-
-    ValidatorMetadata.address 0xcBB2912666c7e8023B7ec78B6842702eB26336aC 
-
-    ProxyStorage.address 0x0985eb35bd7b5ecd1d88de34ceae174627f058b6 
+PoaNetworkConsensus: 0x83451c8bc04d4ee9745ccc58edfab88037bc48cc
+ProxyStorage: 0x6f4aadbb17789b4f5e9e97d456dc4e01b117ccb3
+KeysManager: 0x2b1dbc7390a65dc40f7d64d67ea11b4d627dd1bf
+BallotsStorage: 0x3a28ecc276d222829f78c98d43d719eafda0a6fe
+VotingToChangeKeys: 0x215794efe4b86a2fbcbf706bc9ade63663f1eae1
+VotingToChangeMinThreshold: 0xca863b0d12193a87b5173fd51fa4aa1703fb8a32
+VotingToChangeProxyAddress: 0x9c8a06f0197ee718cd820adeb48a88ea2a9b5c48
+ValidatorMetadata.address 0xcBB2912666c7e8023B7ec78B6842702eB26336aC 
