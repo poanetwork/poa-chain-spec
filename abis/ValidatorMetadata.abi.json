@@ -56,6 +56,25 @@
   },
   {
     "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "pendingProxyConfirmations",
+    "outputs": [
+      {
+        "name": "count",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
     "inputs": [],
     "name": "getBallotsStorage",
     "outputs": [
@@ -66,6 +85,20 @@
     ],
     "payable": false,
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_newProxyAddress",
+        "type": "address"
+      }
+    ],
+    "name": "setProxyAddress",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -113,6 +146,53 @@
     ],
     "payable": false,
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_firstName",
+        "type": "bytes32"
+      },
+      {
+        "name": "_lastName",
+        "type": "bytes32"
+      },
+      {
+        "name": "_licenseId",
+        "type": "bytes32"
+      },
+      {
+        "name": "_fullAddress",
+        "type": "string"
+      },
+      {
+        "name": "_state",
+        "type": "bytes32"
+      },
+      {
+        "name": "_zipcode",
+        "type": "uint256"
+      },
+      {
+        "name": "_expirationDate",
+        "type": "uint256"
+      },
+      {
+        "name": "_miningKey",
+        "type": "address"
+      }
+    ],
+    "name": "changeRequestForValidator",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -173,6 +253,20 @@
         "type": "bool"
       }
     ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_newProxyAddress",
+        "type": "address"
+      }
+    ],
+    "name": "confirmNewProxyAddress",
+    "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function"
@@ -241,6 +335,20 @@
   {
     "constant": true,
     "inputs": [],
+    "name": "pendingProxyStorage",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
     "name": "getMinThreshold",
     "outputs": [
       {
@@ -265,6 +373,29 @@
       }
     ],
     "name": "isAddressAlreadyVoted",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_newProxy",
+        "type": "address"
+      },
+      {
+        "name": "_voter",
+        "type": "address"
+      }
+    ],
+    "name": "isAddressAlreadyVotedProxy",
     "outputs": [
       {
         "name": "",
@@ -456,6 +587,30 @@
       }
     ],
     "name": "FinalizedChange",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "newProxyAddress",
+        "type": "address"
+      }
+    ],
+    "name": "RequestForNewProxy",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "newProxyAddress",
+        "type": "address"
+      }
+    ],
+    "name": "ChangeProxyStorage",
     "type": "event"
   }
 ]
