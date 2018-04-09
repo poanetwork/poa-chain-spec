@@ -3,7 +3,7 @@
     "constant": true,
     "inputs": [
       {
-        "name": "_miningKey",
+        "name": "",
         "type": "address"
       }
     ],
@@ -31,7 +31,7 @@
       },
       {
         "name": "zipcode",
-        "type": "bytes32"
+        "type": "uint256"
       },
       {
         "name": "expirationDate",
@@ -58,7 +58,7 @@
     "constant": true,
     "inputs": [
       {
-        "name": "_newProxyAddress",
+        "name": "",
         "type": "address"
       }
     ],
@@ -67,52 +67,10 @@
       {
         "name": "count",
         "type": "uint256"
-      },
-      {
-        "name": "voters",
-        "type": "address[]"
       }
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_firstName",
-        "type": "bytes32"
-      },
-      {
-        "name": "_lastName",
-        "type": "bytes32"
-      },
-      {
-        "name": "_licenseId",
-        "type": "bytes32"
-      },
-      {
-        "name": "_fullAddress",
-        "type": "string"
-      },
-      {
-        "name": "_state",
-        "type": "bytes32"
-      },
-      {
-        "name": "_zipcode",
-        "type": "bytes32"
-      },
-      {
-        "name": "_expirationDate",
-        "type": "uint256"
-      }
-    ],
-    "name": "createMetadata",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -147,7 +105,7 @@
     "constant": true,
     "inputs": [
       {
-        "name": "_miningKey",
+        "name": "",
         "type": "address"
       }
     ],
@@ -156,10 +114,6 @@
       {
         "name": "count",
         "type": "uint256"
-      },
-      {
-        "name": "voters",
-        "type": "address[]"
       }
     ],
     "payable": false,
@@ -183,20 +137,6 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "version",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
     "name": "getTime",
     "outputs": [
       {
@@ -209,17 +149,50 @@
     "type": "function"
   },
   {
-    "constant": true,
-    "inputs": [],
-    "name": "implementation",
-    "outputs": [
+    "constant": false,
+    "inputs": [
       {
-        "name": "",
+        "name": "_firstName",
+        "type": "bytes32"
+      },
+      {
+        "name": "_lastName",
+        "type": "bytes32"
+      },
+      {
+        "name": "_licenseId",
+        "type": "bytes32"
+      },
+      {
+        "name": "_fullAddress",
+        "type": "string"
+      },
+      {
+        "name": "_state",
+        "type": "bytes32"
+      },
+      {
+        "name": "_zipcode",
+        "type": "uint256"
+      },
+      {
+        "name": "_expirationDate",
+        "type": "uint256"
+      },
+      {
+        "name": "_miningKey",
         "type": "address"
       }
     ],
+    "name": "changeRequestForValidator",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
-    "stateMutability": "view",
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -266,31 +239,20 @@
       },
       {
         "name": "_zipcode",
-        "type": "bytes32"
+        "type": "uint256"
       },
       {
         "name": "_expirationDate",
         "type": "uint256"
-      },
-      {
-        "name": "_createdDate",
-        "type": "uint256"
-      },
-      {
-        "name": "_updatedDate",
-        "type": "uint256"
-      },
-      {
-        "name": "_minThreshold",
-        "type": "uint256"
-      },
-      {
-        "name": "_miningKey",
-        "type": "address"
       }
     ],
-    "name": "initMetadata",
-    "outputs": [],
+    "name": "changeRequest",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function"
@@ -349,96 +311,6 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_firstName",
-        "type": "bytes32"
-      },
-      {
-        "name": "_lastName",
-        "type": "bytes32"
-      },
-      {
-        "name": "_licenseId",
-        "type": "bytes32"
-      },
-      {
-        "name": "_fullAddress",
-        "type": "string"
-      },
-      {
-        "name": "_state",
-        "type": "bytes32"
-      },
-      {
-        "name": "_zipcode",
-        "type": "bytes32"
-      },
-      {
-        "name": "_expirationDate",
-        "type": "uint256"
-      },
-      {
-        "name": "_miningKey",
-        "type": "address"
-      }
-    ],
-    "name": "changeRequestForValidator",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_firstName",
-        "type": "bytes32"
-      },
-      {
-        "name": "_lastName",
-        "type": "bytes32"
-      },
-      {
-        "name": "_licenseId",
-        "type": "bytes32"
-      },
-      {
-        "name": "_fullAddress",
-        "type": "string"
-      },
-      {
-        "name": "_state",
-        "type": "bytes32"
-      },
-      {
-        "name": "_zipcode",
-        "type": "bytes32"
-      },
-      {
-        "name": "_expirationDate",
-        "type": "uint256"
-      }
-    ],
-    "name": "changeRequest",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -536,8 +408,37 @@
   },
   {
     "constant": false,
-    "inputs": [],
-    "name": "initMetadataDisable",
+    "inputs": [
+      {
+        "name": "_firstName",
+        "type": "bytes32"
+      },
+      {
+        "name": "_lastName",
+        "type": "bytes32"
+      },
+      {
+        "name": "_licenseId",
+        "type": "bytes32"
+      },
+      {
+        "name": "_fullAddress",
+        "type": "string"
+      },
+      {
+        "name": "_state",
+        "type": "bytes32"
+      },
+      {
+        "name": "_zipcode",
+        "type": "uint256"
+      },
+      {
+        "name": "_expirationDate",
+        "type": "uint256"
+      }
+    ],
+    "name": "createMetadata",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
@@ -561,7 +462,7 @@
     "constant": true,
     "inputs": [
       {
-        "name": "_miningKey",
+        "name": "",
         "type": "address"
       }
     ],
@@ -589,7 +490,7 @@
       },
       {
         "name": "zipcode",
-        "type": "bytes32"
+        "type": "uint256"
       },
       {
         "name": "expirationDate",
@@ -611,6 +512,17 @@
     "payable": false,
     "stateMutability": "view",
     "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_proxyStorage",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
   },
   {
     "anonymous": false,
