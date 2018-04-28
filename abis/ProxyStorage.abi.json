@@ -14,6 +14,36 @@
     "type": "function"
   },
   {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_keysManager",
+        "type": "address"
+      },
+      {
+        "name": "_votingToChangeKeys",
+        "type": "address"
+      },
+      {
+        "name": "_votingToChangeMinThreshold",
+        "type": "address"
+      },
+      {
+        "name": "_votingToChangeProxy",
+        "type": "address"
+      },
+      {
+        "name": "_ballotsStorage",
+        "type": "address"
+      }
+    ],
+    "name": "initializeAddresses",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "constant": true,
     "inputs": [],
     "name": "getBallotsStorage",
@@ -39,40 +69,6 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_keysManager",
-        "type": "address"
-      },
-      {
-        "name": "_votingToChangeKeys",
-        "type": "address"
-      },
-      {
-        "name": "_votingToChangeMinThreshold",
-        "type": "address"
-      },
-      {
-        "name": "_votingToChangeProxy",
-        "type": "address"
-      },
-      {
-        "name": "_ballotsStorage",
-        "type": "address"
-      },
-      {
-        "name": "_validatorMetadataEternalStorage",
-        "type": "address"
-      }
-    ],
-    "name": "initializeAddresses",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -135,20 +131,6 @@
     "constant": true,
     "inputs": [],
     "name": "getVotingToChangeMinThreshold",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getValidatorMetadata",
     "outputs": [
       {
         "name": "",
@@ -233,11 +215,6 @@
       {
         "indexed": false,
         "name": "ballotsStorage",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "name": "validatorMetadataEternalStorage",
         "type": "address"
       }
     ],
