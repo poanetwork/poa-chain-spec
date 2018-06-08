@@ -1,0 +1,21 @@
+# POA Network example config
+# to start run
+#     parity --config node.toml
+
+[parity]
+# download spec.json from https://raw.githubusercontent.com/poanetwork/poa-chain-spec/core/spec.json
+chain = "spec.json"
+
+[network]
+# we provide you a list with additional bootnodes
+# (public bootnodes are available at https://raw.githubusercontent.com/poanetwork/poa-chain-spec/core/bootnodes.txt) 
+reserved_peers="bootnodes.txt"
+
+[rpc]
+apis = ["eth","net"]
+
+[websockets]
+apis = ["eth", "net"]
+
+[footprint]
+pruning = "archive"
