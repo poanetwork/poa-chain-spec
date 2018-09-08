@@ -1,7 +1,7 @@
 # Configuration file for `POA Network` networks
 
-Each network must have branch with `chain.json`, `bootnodes.txt`
-If there are script they should be in `script/` directory.
+Each network must have branch with `spec.json`, `bootnodes.txt`.
+If there are scripts, they should be in `script/` directory.
 
 ## Network IDs
 
@@ -12,7 +12,7 @@ If there are script they should be in `script/` directory.
 
 ## Contribution guides
 
-Modification of `chain.json` file without an approved PR is prohibited. 
+Modification of `spec.json` file without an approved PR is prohibited.
 
 List of approvers:
 
