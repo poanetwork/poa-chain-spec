@@ -1,0 +1,759 @@
+[
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "signer",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "totalConfirmed",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint64"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "registry",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "users",
+    "outputs": [
+      {
+        "name": "creationBlock",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "totalUsers",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint64"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "totalAddresses",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint64"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_registry",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "newSigner",
+        "type": "address"
+      }
+    ],
+    "name": "LogSignerChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "newRegistry",
+        "type": "address"
+      }
+    ],
+    "name": "LogRegistryChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "wallet",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "keccakIdentifier",
+        "type": "bytes32"
+      }
+    ],
+    "name": "LogAddressRegistered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "wallet",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "keccakIdentifier",
+        "type": "bytes32"
+      }
+    ],
+    "name": "LogAddressUnregistered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "wallet",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "keccakIdentifier",
+        "type": "bytes32"
+      }
+    ],
+    "name": "LogAddressConfirmed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "LogClaimedTokens",
+    "type": "event"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "data",
+        "type": "bytes32"
+      },
+      {
+        "name": "v",
+        "type": "uint8"
+      },
+      {
+        "name": "r",
+        "type": "bytes32"
+      },
+      {
+        "name": "s",
+        "type": "bytes32"
+      }
+    ],
+    "name": "signerIsValid",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "newSigner",
+        "type": "address"
+      }
+    ],
+    "name": "setSigner",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "newRegistry",
+        "type": "address"
+      }
+    ],
+    "name": "setRegistry",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "amountWei",
+        "type": "uint256"
+      }
+    ],
+    "name": "withdrawSome",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "withdrawAll",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "wallet",
+        "type": "address"
+      }
+    ],
+    "name": "userExists",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "wallet",
+        "type": "address"
+      },
+      {
+        "name": "addressIndex",
+        "type": "uint256"
+      }
+    ],
+    "name": "userAddressConfirmed",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "wallet",
+        "type": "address"
+      },
+      {
+        "name": "creationBlock",
+        "type": "uint256"
+      }
+    ],
+    "name": "userAddressByCreationBlock",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "wallet",
+        "type": "address"
+      },
+      {
+        "name": "confirmationCodeSha3",
+        "type": "bytes32"
+      }
+    ],
+    "name": "userAddressByConfirmationCode",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "bool"
+      },
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "wallet",
+        "type": "address"
+      },
+      {
+        "name": "country",
+        "type": "string"
+      },
+      {
+        "name": "state",
+        "type": "string"
+      },
+      {
+        "name": "city",
+        "type": "string"
+      },
+      {
+        "name": "location",
+        "type": "string"
+      },
+      {
+        "name": "zip",
+        "type": "string"
+      }
+    ],
+    "name": "userAddressByAddress",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "wallet",
+        "type": "address"
+      },
+      {
+        "name": "keccakIdentifier",
+        "type": "bytes32"
+      }
+    ],
+    "name": "userAddressByKeccakIdentifier",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "wallet",
+        "type": "address"
+      }
+    ],
+    "name": "userLastSubmittedName",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "wallet",
+        "type": "address"
+      }
+    ],
+    "name": "userLastConfirmedName",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "wallet",
+        "type": "address"
+      }
+    ],
+    "name": "userSubmittedAddressesCount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "wallet",
+        "type": "address"
+      }
+    ],
+    "name": "userConfirmedAddressesCount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "wallet",
+        "type": "address"
+      },
+      {
+        "name": "addressIndex",
+        "type": "uint256"
+      }
+    ],
+    "name": "userAddress",
+    "outputs": [
+      {
+        "name": "country",
+        "type": "string"
+      },
+      {
+        "name": "state",
+        "type": "string"
+      },
+      {
+        "name": "city",
+        "type": "string"
+      },
+      {
+        "name": "location",
+        "type": "string"
+      },
+      {
+        "name": "zip",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "wallet",
+        "type": "address"
+      },
+      {
+        "name": "addressIndex",
+        "type": "uint256"
+      }
+    ],
+    "name": "userAddressInfo",
+    "outputs": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "creationBlock",
+        "type": "uint256"
+      },
+      {
+        "name": "confirmationBlock",
+        "type": "uint256"
+      },
+      {
+        "name": "keccakIdentifier",
+        "type": "bytes32"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "country",
+        "type": "string"
+      },
+      {
+        "name": "state",
+        "type": "string"
+      },
+      {
+        "name": "city",
+        "type": "string"
+      },
+      {
+        "name": "location",
+        "type": "string"
+      },
+      {
+        "name": "zip",
+        "type": "string"
+      },
+      {
+        "name": "priceWei",
+        "type": "uint256"
+      },
+      {
+        "name": "confirmationCodeSha3",
+        "type": "bytes32"
+      },
+      {
+        "name": "sigV",
+        "type": "uint8"
+      },
+      {
+        "name": "sigR",
+        "type": "bytes32"
+      },
+      {
+        "name": "sigS",
+        "type": "bytes32"
+      }
+    ],
+    "name": "registerAddress",
+    "outputs": [],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "country",
+        "type": "string"
+      },
+      {
+        "name": "state",
+        "type": "string"
+      },
+      {
+        "name": "city",
+        "type": "string"
+      },
+      {
+        "name": "location",
+        "type": "string"
+      },
+      {
+        "name": "zip",
+        "type": "string"
+      }
+    ],
+    "name": "unregisterAddress",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "confirmationCodePlain",
+        "type": "string"
+      },
+      {
+        "name": "sigV",
+        "type": "uint8"
+      },
+      {
+        "name": "sigR",
+        "type": "bytes32"
+      },
+      {
+        "name": "sigS",
+        "type": "bytes32"
+      }
+    ],
+    "name": "confirmAddress",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_token",
+        "type": "address"
+      },
+      {
+        "name": "_to",
+        "type": "address"
+      }
+    ],
+    "name": "claimTokens",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
