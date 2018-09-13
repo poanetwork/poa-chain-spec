@@ -11,14 +11,47 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x247b3210"
   },
   {
     "constant": true,
     "inputs": [
       {
         "name": "_ballotType",
-        "type": "uint8"
+        "type": "uint256"
+      },
+      {
+        "name": "_affectedKeyType",
+        "type": "uint256"
+      },
+      {
+        "name": "_affectedKey",
+        "type": "address"
+      },
+      {
+        "name": "_miningKey",
+        "type": "address"
+      }
+    ],
+    "name": "areKeysBallotParamsValid",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x3fd626d4"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_ballotType",
+        "type": "uint256"
       }
     ],
     "name": "getBallotThreshold",
@@ -30,25 +63,38 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x45e23b53"
   },
   {
-    "constant": false,
-    "inputs": [
+    "constant": true,
+    "inputs": [],
+    "name": "initDisabled",
+    "outputs": [
       {
-        "name": "_newValue",
-        "type": "uint256"
-      },
-      {
-        "name": "_thresholdType",
-        "type": "uint8"
+        "name": "",
+        "type": "bool"
       }
     ],
-    "name": "setThreshold",
-    "outputs": [],
     "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x52a36938"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "metadataChangeConfirmationsLimit",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "pure",
+    "type": "function",
+    "signature": "0x93673620"
   },
   {
     "constant": true,
@@ -62,21 +108,47 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xae4b1b5b"
   },
   {
-    "constant": true,
-    "inputs": [],
-    "name": "getTotalNumberOfValidators",
-    "outputs": [
+    "constant": false,
+    "inputs": [
       {
-        "name": "",
+        "name": "_newValue",
+        "type": "uint256"
+      },
+      {
+        "name": "_thresholdType",
         "type": "uint256"
       }
     ],
+    "name": "setThreshold",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xb9c36209"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_prevBallotsStorage",
+        "type": "address"
+      }
+    ],
+    "name": "migrate",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xce5494bb"
   },
   {
     "constant": true,
@@ -90,7 +162,23 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xd1104cb2"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_thresholds",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "init",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xd88b06db"
   },
   {
     "constant": true,
@@ -104,7 +192,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xeecd1079"
   },
   {
     "constant": true,
@@ -118,18 +207,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "name": "_proxyStorage",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "constructor"
+    "type": "function",
+    "signature": "0xfcff021c"
   },
   {
     "anonymous": false,
@@ -137,7 +216,7 @@
       {
         "indexed": true,
         "name": "thresholdType",
-        "type": "uint8"
+        "type": "uint256"
       },
       {
         "indexed": false,
@@ -146,6 +225,7 @@
       }
     ],
     "name": "ThresholdChanged",
-    "type": "event"
+    "type": "event",
+    "signature": "0x3164947cf0f49f08dd0cd80e671535b1e11590d347c55dcaa97ba3c24a96b33a"
   }
 ]

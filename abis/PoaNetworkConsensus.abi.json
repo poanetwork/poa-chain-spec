@@ -16,7 +16,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x03aca792"
   },
   {
     "constant": true,
@@ -30,7 +31,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x0eaba26a"
   },
   {
     "constant": false,
@@ -44,7 +46,8 @@
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x10855269"
   },
   {
     "constant": false,
@@ -59,24 +62,46 @@
       }
     ],
     "name": "addValidator",
-    "outputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x21a3fb85"
   },
   {
     "constant": true,
     "inputs": [],
-    "name": "currentValidatorsLength",
+    "name": "isMasterOfCeremonyRemovedPending",
     "outputs": [
       {
         "name": "",
-        "type": "uint256"
+        "type": "bool"
       }
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x273cb593"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "isMasterOfCeremonyRemoved",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x379fed9a"
   },
   {
     "constant": true,
@@ -93,13 +118,18 @@
         "type": "bool"
       },
       {
+        "name": "isValidatorFinalized",
+        "type": "bool"
+      },
+      {
         "name": "index",
         "type": "uint256"
       }
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x4110a489"
   },
   {
     "constant": true,
@@ -113,21 +143,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getVotingToChangeKeys",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x45199e0a"
   },
   {
     "constant": false,
@@ -136,7 +153,8 @@
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x75286211"
   },
   {
     "constant": false,
@@ -151,10 +169,36 @@
       }
     ],
     "name": "swapValidatorKey",
-    "outputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x879736b2"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_someone",
+        "type": "address"
+      }
+    ],
+    "name": "isValidatorFinalized",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x8f2eabe1"
   },
   {
     "constant": true,
@@ -173,7 +217,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x900eb5a8"
   },
   {
     "constant": true,
@@ -187,12 +232,13 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x9a573786"
   },
   {
     "constant": true,
     "inputs": [],
-    "name": "isMasterOfCeremonyInitialized",
+    "name": "wasProxyStorageSet",
     "outputs": [
       {
         "name": "",
@@ -201,7 +247,23 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xa5f8b874"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getCurrentValidatorsLengthWithoutMoC",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xa8756337"
   },
   {
     "constant": true,
@@ -215,7 +277,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xae4b1b5b"
   },
   {
     "constant": true,
@@ -229,7 +292,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xb3f05b97"
   },
   {
     "constant": true,
@@ -243,7 +307,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xb7ab4db5"
   },
   {
     "constant": true,
@@ -257,7 +322,23 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xd3e848f1"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "masterOfCeremonyPending",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xec7de1e9"
   },
   {
     "constant": false,
@@ -272,10 +353,16 @@
       }
     ],
     "name": "removeValidator",
-    "outputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0xf89a77b1"
   },
   {
     "constant": true,
@@ -289,7 +376,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xfa81b200"
   },
   {
     "constant": true,
@@ -308,7 +396,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xfacd743b"
   },
   {
     "inputs": [
@@ -323,7 +412,8 @@
     ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "constructor"
+    "type": "constructor",
+    "signature": "constructor"
   },
   {
     "anonymous": false,
@@ -340,7 +430,8 @@
       }
     ],
     "name": "InitiateChange",
-    "type": "event"
+    "type": "event",
+    "signature": "0x55252fa6eee4741b4e24a74a70e9c11fd2c2281df8d6ea13126ff845f7825c89"
   },
   {
     "anonymous": false,
@@ -352,24 +443,8 @@
       }
     ],
     "name": "ChangeFinalized",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "name": "nameOfContract",
-        "type": "string"
-      },
-      {
-        "indexed": false,
-        "name": "newAddress",
-        "type": "address"
-      }
-    ],
-    "name": "ChangeReference",
-    "type": "event"
+    "type": "event",
+    "signature": "0x8564cd629b15f47dc310d45bcbfc9bcf5420b0d51bf0659a16c67f91d2763253"
   },
   {
     "anonymous": false,
@@ -381,6 +456,7 @@
       }
     ],
     "name": "MoCInitializedProxyStorage",
-    "type": "event"
+    "type": "event",
+    "signature": "0x600bcf04a13e752d1e3670a5a9f1c21177ca2a93c6f5391d4f1298d098097c22"
   }
 ]
