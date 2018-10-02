@@ -8,6 +8,7 @@ If there are scripts, they should be in `script/` directory.
 - 99 or `0x63` - Core, livenet
 - 77 or `0x4D` - Sokol, testnet
 - 78 or `0x4E` - Red, testnet for security testing
+- 79 or `ox4F` - Dai testnet
 
 
 ## Contribution guides
