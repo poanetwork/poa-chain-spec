@@ -11,16 +11,16 @@
           "multi": {
             "0": {
               "list": [
-                "0x7ba810b580a59b18461dcdc74e94b06b57225e8f"
+                "0xf707e92b54e693d09e4c2e69920f00eb5411ae12"
               ]
             },
-            "14300": {
-              "safeContract": "0xe302e8359bfd972331eff6879da1e816646adcf1"
+            "800": {
+              "safeContract": "0x2cbb814e35e14cf0051f7c75acad9baf05681af9"
             }
           }
         },
-        "blockRewardContractAddress": "0xb1a52fb913df1f2504d7292c2208cabd8aaf1d93",
-        "blockRewardContractTransition": 14301
+        "blockRewardContractAddress": "0x8a9aa9a123ec34af7d4d2a8c72e7621f9e86f315",
+        "blockRewardContractTransition": 802
       }
     }
   },
@@ -33,7 +33,7 @@
     "eip211Transition": "0x0",
     "eip214Transition": "0x0",
     "eip658Transition": "0x0",
-    "registrar": "0xad9f3a79a34f35b725a3fb2ec8a56a54a920d70d"
+    "registrar": "0x5fe482ae11d8ab58f7909d0d9c613701eed50836"
   },
   "genesis": {
     "seal": {
