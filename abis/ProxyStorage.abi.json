@@ -1,252 +1,5 @@
 [
   {
-    "constant": true,
-    "inputs": [],
-    "name": "getRewardByBlock",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function",
-    "signature": "0x02afdfd4"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getVotingToChangeProxy",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function",
-    "signature": "0x13e468b3"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_poaConsensus",
-        "type": "address"
-      }
-    ],
-    "name": "init",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function",
-    "signature": "0x19ab453c"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getBallotsStorage",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function",
-    "signature": "0x36ee7773"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getVotingToChangeKeys",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function",
-    "signature": "0x49285b58"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "initDisabled",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function",
-    "signature": "0x52a36938"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "mocInitialized",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function",
-    "signature": "0x6398316c"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getVotingToManageEmissionFunds",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function",
-    "signature": "0x6ecad99d"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getPoaConsensus",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function",
-    "signature": "0x8b8414c4"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getKeysManager",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function",
-    "signature": "0x9a573786"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_keysManagerEternalStorage",
-        "type": "address"
-      },
-      {
-        "name": "_votingToChangeKeysEternalStorage",
-        "type": "address"
-      },
-      {
-        "name": "_votingToChangeMinThresholdEternalStorage",
-        "type": "address"
-      },
-      {
-        "name": "_votingToChangeProxyEternalStorage",
-        "type": "address"
-      },
-      {
-        "name": "_votingToManageEmissionFundsEternalStorage",
-        "type": "address"
-      },
-      {
-        "name": "_ballotsStorageEternalStorage",
-        "type": "address"
-      },
-      {
-        "name": "_validatorMetadataEternalStorage",
-        "type": "address"
-      },
-      {
-        "name": "_rewardByBlockEternalStorage",
-        "type": "address"
-      }
-    ],
-    "name": "initializeAddresses",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function",
-    "signature": "0x9efa82cf"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getVotingToChangeMinThreshold",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function",
-    "signature": "0xa3b3fff1"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getValidatorMetadata",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function",
-    "signature": "0xb1339de3"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_contractType",
-        "type": "uint256"
-      },
-      {
-        "name": "_contractAddress",
-        "type": "address"
-      }
-    ],
-    "name": "setContractAddress",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function",
-    "signature": "0xbb0165b1"
-  },
-  {
     "anonymous": false,
     "inputs": [
       {
@@ -291,8 +44,7 @@
       }
     ],
     "name": "ProxyInitialized",
-    "type": "event",
-    "signature": "0xa0b05192e1273ceffbbdd1e02195c6ea17c6555a090c4f498adbd7ba31a19eb6"
+    "type": "event"
   },
   {
     "anonymous": false,
@@ -309,7 +61,239 @@
       }
     ],
     "name": "AddressSet",
-    "type": "event",
-    "signature": "0xcb8f0f32182a0f756b1e065dab832c24d2c48fa533912c33552252a7f25bf4ae"
+    "type": "event"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "initDisabled",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_poaConsensus",
+        "type": "address"
+      }
+    ],
+    "name": "init",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "mocInitialized",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getKeysManager",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getVotingToChangeKeys",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getVotingToChangeMinThreshold",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getVotingToChangeProxy",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getVotingToManageEmissionFunds",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getPoaConsensus",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getBallotsStorage",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getValidatorMetadata",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getRewardByBlock",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_keysManagerEternalStorage",
+        "type": "address"
+      },
+      {
+        "name": "_votingToChangeKeysEternalStorage",
+        "type": "address"
+      },
+      {
+        "name": "_votingToChangeMinThresholdEternalStorage",
+        "type": "address"
+      },
+      {
+        "name": "_votingToChangeProxyEternalStorage",
+        "type": "address"
+      },
+      {
+        "name": "_votingToManageEmissionFundsEternalStorage",
+        "type": "address"
+      },
+      {
+        "name": "_ballotsStorageEternalStorage",
+        "type": "address"
+      },
+      {
+        "name": "_validatorMetadataEternalStorage",
+        "type": "address"
+      },
+      {
+        "name": "_rewardByBlockEternalStorage",
+        "type": "address"
+      }
+    ],
+    "name": "initializeAddresses",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_contractType",
+        "type": "uint256"
+      },
+      {
+        "name": "_contractAddress",
+        "type": "address"
+      }
+    ],
+    "name": "setContractAddress",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
   }
 ]
