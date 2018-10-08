@@ -3,7 +3,42 @@
     "constant": true,
     "inputs": [
       {
+        "name": "_initialKey",
+        "type": "address"
+      }
+    ],
+    "name": "getInitialKeyStatus",
+    "outputs": [
+      {
         "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x17706507"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_previousKeysManager",
+        "type": "address"
+      }
+    ],
+    "name": "init",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x19ab453c"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_miningKey",
         "type": "address"
       }
     ],
@@ -16,7 +51,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x1e48e146"
   },
   {
     "constant": false,
@@ -27,10 +63,16 @@
       }
     ],
     "name": "removePayoutKey",
-    "outputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x1e534e71"
   },
   {
     "constant": false,
@@ -41,10 +83,16 @@
       }
     ],
     "name": "removeVotingKey",
-    "outputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x2a968f49"
   },
   {
     "constant": true,
@@ -63,7 +111,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x2befe2e1"
   },
   {
     "constant": true,
@@ -82,7 +131,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x2d260227"
   },
   {
     "constant": false,
@@ -93,10 +143,16 @@
       }
     ],
     "name": "addMiningKey",
-    "outputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x38949514"
   },
   {
     "constant": true,
@@ -110,13 +166,14 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x4433418f"
   },
   {
     "constant": true,
     "inputs": [
       {
-        "name": "",
+        "name": "_miningKey",
         "type": "address"
       }
     ],
@@ -129,7 +186,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x458779da"
   },
   {
     "constant": true,
@@ -143,7 +201,23 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x49285b58"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "initDisabled",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x52a36938"
   },
   {
     "constant": true,
@@ -157,42 +231,44 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x557ed1ba"
   },
   {
     "constant": true,
     "inputs": [
       {
-        "name": "",
+        "name": "_miningKey",
         "type": "address"
       }
     ],
     "name": "validatorKeys",
     "outputs": [
       {
-        "name": "votingKey",
+        "name": "validatorVotingKey",
         "type": "address"
       },
       {
-        "name": "payoutKey",
+        "name": "validatorPayoutKey",
         "type": "address"
       },
       {
-        "name": "isMiningActive",
+        "name": "isValidatorMiningActive",
         "type": "bool"
       },
       {
-        "name": "isVotingActive",
+        "name": "isValidatorVotingActive",
         "type": "bool"
       },
       {
-        "name": "isPayoutActive",
+        "name": "isValidatorPayoutActive",
         "type": "bool"
       }
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x5c0569f8"
   },
   {
     "constant": true,
@@ -206,7 +282,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x62907170"
   },
   {
     "constant": true,
@@ -225,7 +302,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x62b46d64"
   },
   {
     "constant": false,
@@ -240,29 +318,40 @@
       }
     ],
     "name": "addPayoutKey",
-    "outputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x651ebb5f"
   },
   {
     "constant": true,
     "inputs": [
       {
-        "name": "",
+        "name": "_currentKey",
+        "type": "address"
+      },
+      {
+        "name": "_newKey",
         "type": "address"
       }
     ],
-    "name": "initialKeys",
+    "name": "checkIfMiningExisted",
     "outputs": [
       {
         "name": "",
-        "type": "uint8"
+        "type": "bool"
       }
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x731fcb9a"
   },
   {
     "constant": false,
@@ -277,10 +366,16 @@
       }
     ],
     "name": "swapPayoutKey",
-    "outputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x771ae299"
   },
   {
     "constant": true,
@@ -299,7 +394,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x7cded930"
   },
   {
     "constant": false,
@@ -310,10 +406,16 @@
       }
     ],
     "name": "removeMiningKey",
-    "outputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x7ebf43fc"
   },
   {
     "constant": true,
@@ -326,8 +428,9 @@
       }
     ],
     "payable": false,
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "pure",
+    "type": "function",
+    "signature": "0x81b03427"
   },
   {
     "constant": false,
@@ -341,7 +444,8 @@
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x85b84ccb"
   },
   {
     "constant": false,
@@ -355,7 +459,8 @@
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x8743e882"
   },
   {
     "constant": false,
@@ -370,10 +475,16 @@
       }
     ],
     "name": "addVotingKey",
-    "outputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x9503ab72"
   },
   {
     "constant": false,
@@ -387,7 +498,8 @@
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x98943eb6"
   },
   {
     "constant": true,
@@ -406,21 +518,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "contractVersion",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint8"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x9bc91c22"
   },
   {
     "constant": true,
@@ -439,7 +538,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xa5a36dee"
   },
   {
     "constant": true,
@@ -453,26 +553,43 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xae4b1b5b"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "maxOldMiningKeysDeepCheck",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "pure",
+    "type": "function",
+    "signature": "0xb9bdaa07"
   },
   {
     "constant": true,
     "inputs": [
       {
-        "name": "_initialKey",
+        "name": "_payoutKey",
         "type": "address"
       }
     ],
-    "name": "getInitialKey",
+    "name": "miningKeyByPayout",
     "outputs": [
       {
         "name": "",
-        "type": "uint8"
+        "type": "address"
       }
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xc04455b5"
   },
   {
     "constant": false,
@@ -494,7 +611,8 @@
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0xc6232a15"
   },
   {
     "constant": true,
@@ -508,7 +626,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xd2acbc12"
   },
   {
     "constant": false,
@@ -523,10 +642,16 @@
       }
     ],
     "name": "swapVotingKey",
-    "outputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0xd33eb5ae"
   },
   {
     "constant": false,
@@ -541,10 +666,36 @@
       }
     ],
     "name": "swapMiningKey",
-    "outputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0xd44379cf"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_miningKey",
+        "type": "address"
+      }
+    ],
+    "name": "isVotingActiveByMiningKey",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xdb7cf00b"
   },
   {
     "constant": true,
@@ -557,14 +708,15 @@
       }
     ],
     "payable": false,
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "pure",
+    "type": "function",
+    "signature": "0xe7f57c83"
   },
   {
     "constant": true,
     "inputs": [
       {
-        "name": "",
+        "name": "_votingKey",
         "type": "address"
       }
     ],
@@ -577,7 +729,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xfa46eacd"
   },
   {
     "constant": true,
@@ -591,7 +744,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xfa81b200"
   },
   {
     "constant": true,
@@ -610,30 +764,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "name": "_proxyStorage",
-        "type": "address"
-      },
-      {
-        "name": "_poaConsensus",
-        "type": "address"
-      },
-      {
-        "name": "_masterOfCeremony",
-        "type": "address"
-      },
-      {
-        "name": "_previousKeysManager",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "constructor"
+    "type": "function",
+    "signature": "0xfee09285"
   },
   {
     "anonymous": false,
@@ -644,18 +776,14 @@
         "type": "address"
       },
       {
-        "indexed": true,
-        "name": "miningKey",
-        "type": "address"
-      },
-      {
         "indexed": false,
         "name": "action",
         "type": "string"
       }
     ],
-    "name": "PayoutKeyChanged",
-    "type": "event"
+    "name": "MiningKeyChanged",
+    "type": "event",
+    "signature": "0x31511048ccdf9fbe46c149f8f729923c1232debeff658d242292f37365b45718"
   },
   {
     "anonymous": false,
@@ -677,7 +805,8 @@
       }
     ],
     "name": "VotingKeyChanged",
-    "type": "event"
+    "type": "event",
+    "signature": "0x3c12ed73d04c6ac636caa62bedf7896dc1452a189bd7fcdbcae6e9765233ca55"
   },
   {
     "anonymous": false,
@@ -688,13 +817,19 @@
         "type": "address"
       },
       {
+        "indexed": true,
+        "name": "miningKey",
+        "type": "address"
+      },
+      {
         "indexed": false,
         "name": "action",
         "type": "string"
       }
     ],
-    "name": "MiningKeyChanged",
-    "type": "event"
+    "name": "PayoutKeyChanged",
+    "type": "event",
+    "signature": "0x568d585fdb4f8eee3a22e8b798c49e9d6ac5fbfced5bc1b872a74808e3be7c7d"
   },
   {
     "anonymous": false,
@@ -716,7 +851,8 @@
       }
     ],
     "name": "ValidatorInitialized",
-    "type": "event"
+    "type": "event",
+    "signature": "0x09b714df46e3a39ff284866b80612984e10c731561c157cd03aca91e436808a5"
   },
   {
     "anonymous": false,
@@ -738,7 +874,8 @@
       }
     ],
     "name": "InitialKeyCreated",
-    "type": "event"
+    "type": "event",
+    "signature": "0x8f0993529f6c865998786a88a06fce1f0261f632bf90ee1b50fa640338d5e936"
   },
   {
     "anonymous": false,
@@ -755,6 +892,7 @@
       }
     ],
     "name": "Migrated",
-    "type": "event"
+    "type": "event",
+    "signature": "0x495f7fdbe153771103489f5c94591c07cd8e655814d1f12739f591b94411ec07"
   }
 ]
