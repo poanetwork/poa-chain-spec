@@ -1,5 +1,5 @@
 {
-  "name": "DaiTest",
+  "name": "DaiChain",
   "engine": {
     "authorityRound": {
       "params": {
@@ -10,17 +10,15 @@
         "validators": {
           "multi": {
             "0": {
-              "list": [
-                "0xf707e92b54e693d09e4c2e69920f00eb5411ae12"
-              ]
+              "list": ["0xcace5b3c29211740e595850e80478416ee77ca21"]
             },
-            "800": {
-              "safeContract": "0x2cbb814e35e14cf0051f7c75acad9baf05681af9"
+            "1300": {
+              "safeContract": "0x22e1229a2c5b95a60983b5577f745a603284f535"
             }
           }
         },
-        "blockRewardContractAddress": "0x8a9aa9a123ec34af7d4d2a8c72e7621f9e86f315",
-        "blockRewardContractTransition": 802
+        "blockRewardContractAddress": "0x867305d19606aadba405ce534e303d0e225f9556",
+        "blockRewardContractTransition": 1310
       }
     }
   },
@@ -28,12 +26,12 @@
     "gasLimitBoundDivisor": "0x400",
     "maximumExtraDataSize": "0x20",
     "minGasLimit": "0x1388",
-    "networkID": "0x4F",
+    "networkID": "100",
     "eip140Transition": "0x0",
     "eip211Transition": "0x0",
     "eip214Transition": "0x0",
     "eip658Transition": "0x0",
-    "registrar": "0x5fe482ae11d8ab58f7909d0d9c613701eed50836"
+    "registrar": "0x1ec97dc137f5168af053c24460a1200502e1a9d2"
   },
   "genesis": {
     "seal": {
@@ -43,7 +41,7 @@
       }
     },
     "difficulty": "0x20000",
-    "gasLimit": "0x5F5E100"
+    "gasLimit": "0x989680"
   },
   "accounts": {
     "0000000000000000000000000000000000000005": {
