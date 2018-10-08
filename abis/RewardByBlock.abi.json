@@ -2,6 +2,20 @@
   {
     "constant": true,
     "inputs": [],
+    "name": "bridgesAllowedLength",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
     "name": "emissionFunds",
     "outputs": [
       {
@@ -21,20 +35,6 @@
       {
         "name": "",
         "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "bridgeContract",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
       }
     ],
     "payable": false,
@@ -66,6 +66,11 @@
       {
         "indexed": true,
         "name": "receiver",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "bridge",
         "type": "address"
       }
     ],
@@ -136,13 +141,46 @@
   },
   {
     "constant": true,
+    "inputs": [],
+    "name": "bridgesAllowed",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[1]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_bridge",
+        "type": "address"
+      }
+    ],
+    "name": "bridgeAmount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
     "inputs": [
       {
         "name": "_index",
         "type": "uint256"
       }
     ],
-    "name": "extraReceivers",
+    "name": "extraReceiverByIndex",
     "outputs": [
       {
         "name": "",
@@ -161,7 +199,7 @@
         "type": "address"
       }
     ],
-    "name": "extraReceiversAmounts",
+    "name": "extraReceiverAmount",
     "outputs": [
       {
         "name": "",
@@ -251,6 +289,25 @@
     "constant": true,
     "inputs": [],
     "name": "mintedTotally",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_bridge",
+        "type": "address"
+      }
+    ],
+    "name": "mintedTotallyByBridge",
     "outputs": [
       {
         "name": "",
