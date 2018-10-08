@@ -1,5 +1,40 @@
 [
   {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "canBeFinalizedNow",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x009b38fa"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "minBallotDuration",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x02a99b9d"
+  },
+  {
     "constant": false,
     "inputs": [
       {
@@ -11,7 +46,28 @@
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x05261aea"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "getQuorumState",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x08dbb18e"
   },
   {
     "constant": false,
@@ -29,34 +85,16 @@
         "type": "uint256"
       },
       {
-        "name": "memo",
+        "name": "_memo",
         "type": "string"
       }
     ],
-    "name": "createBallotToChangeThreshold",
+    "name": "createBallot",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_id",
-        "type": "uint256"
-      }
-    ],
-    "name": "getIsFinalized",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x1700cc3c"
   },
   {
     "constant": true,
@@ -79,27 +117,14 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getBallotsStorage",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x288fa739"
   },
   {
     "constant": true,
     "inputs": [
       {
-        "name": "",
+        "name": "_index",
         "type": "uint256"
       }
     ],
@@ -112,26 +137,23 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x3bf05e95"
   },
   {
     "constant": true,
-    "inputs": [
-      {
-        "name": "_id",
-        "type": "uint256"
-      }
-    ],
-    "name": "getTotalVoters",
+    "inputs": [],
+    "name": "initDisabled",
     "outputs": [
       {
         "name": "",
-        "type": "uint256"
+        "type": "bool"
       }
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x52a36938"
   },
   {
     "constant": true,
@@ -145,45 +167,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_miningKey",
-        "type": "address"
-      }
-    ],
-    "name": "withinLimit",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_votingKey",
-        "type": "address"
-      }
-    ],
-    "name": "getMiningByVotingKey",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x557ed1ba"
   },
   {
     "constant": true,
@@ -197,26 +182,31 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x6ccc0234"
   },
   {
-    "constant": true,
+    "constant": false,
     "inputs": [
       {
         "name": "_id",
         "type": "uint256"
-      }
-    ],
-    "name": "getMemo",
-    "outputs": [
+      },
       {
-        "name": "",
-        "type": "string"
+        "name": "_prevVotingToChange",
+        "type": "address"
+      },
+      {
+        "name": "_voters",
+        "type": "address[]"
       }
     ],
+    "name": "migrateBasicOne",
+    "outputs": [],
     "payable": false,
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x73ece100"
   },
   {
     "constant": true,
@@ -235,124 +225,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_id",
-        "type": "uint256"
-      }
-    ],
-    "name": "getEndTime",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_id",
-        "type": "uint256"
-      },
-      {
-        "name": "_choice",
-        "type": "uint8"
-      }
-    ],
-    "name": "vote",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getKeysManager",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "proxyStorage",
-    "outputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "maxOldMiningKeysDeepCheck",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint8"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_id",
-        "type": "uint256"
-      }
-    ],
-    "name": "getStartTime",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_id",
-        "type": "uint256"
-      }
-    ],
-    "name": "getMinThresholdOfVoters",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x82afd23b"
   },
   {
     "constant": true,
@@ -366,148 +240,7 @@
         "type": "address"
       }
     ],
-    "name": "hasAlreadyVoted",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getGlobalMinThresholdOfVoters",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_id",
-        "type": "uint256"
-      },
-      {
-        "name": "_miningKey",
-        "type": "address"
-      }
-    ],
-    "name": "areOldMiningKeysVoted",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_id",
-        "type": "uint256"
-      }
-    ],
-    "name": "getProposedValue",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "nextBallotId",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "_id",
-        "type": "uint256"
-      }
-    ],
-    "name": "getProgress",
-    "outputs": [
-      {
-        "name": "",
-        "type": "int256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "name": "validatorActiveBallots",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "getBallotLimitPerValidator",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "name": "votingState",
+    "name": "getBallotInfo",
     "outputs": [
       {
         "name": "startTime",
@@ -530,18 +263,6 @@
         "type": "bool"
       },
       {
-        "name": "quorumState",
-        "type": "uint8"
-      },
-      {
-        "name": "index",
-        "type": "uint256"
-      },
-      {
-        "name": "minThresholdOfVoters",
-        "type": "uint256"
-      },
-      {
         "name": "proposedValue",
         "type": "uint256"
       },
@@ -552,22 +273,307 @@
       {
         "name": "memo",
         "type": "string"
+      },
+      {
+        "name": "canBeFinalizedNow",
+        "type": "bool"
+      },
+      {
+        "name": "alreadyVoted",
+        "type": "bool"
       }
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x8c64a20d"
   },
   {
+    "constant": true,
     "inputs": [
       {
-        "name": "_proxyStorage",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "getIndex",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x8e7cb6e1"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "maxBallotDuration",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "pure",
+    "type": "function",
+    "signature": "0x96bc6ef0"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "migrateDisabled",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x9fc18d4b"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "migrateDisable",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xa3ac1eb1"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_minBallotDuration",
+        "type": "uint256"
+      },
+      {
+        "name": "_minPossibleThreshold",
+        "type": "uint256"
+      }
+    ],
+    "name": "init",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xa5843f08"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "proxyStorage",
+    "outputs": [
+      {
+        "name": "",
         "type": "address"
       }
     ],
     "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xae4b1b5b"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "uint256"
+      },
+      {
+        "name": "_choice",
+        "type": "uint256"
+      }
+    ],
+    "name": "vote",
+    "outputs": [],
+    "payable": false,
     "stateMutability": "nonpayable",
-    "type": "constructor"
+    "type": "function",
+    "signature": "0xb384abef"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "minPossibleThreshold",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb3ea87c4"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "getMinThresholdOfVoters",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc088003d"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "uint256"
+      },
+      {
+        "name": "_votingKey",
+        "type": "address"
+      }
+    ],
+    "name": "hasAlreadyVoted",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc14bfd29"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_id",
+        "type": "uint256"
+      },
+      {
+        "name": "_miningKey",
+        "type": "address"
+      }
+    ],
+    "name": "areOldMiningKeysVoted",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc7dea777"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "nextBallotId",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xdc6bfbb5"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_miningKey",
+        "type": "address"
+      }
+    ],
+    "name": "validatorActiveBallots",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xf49774ee"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_prevVotingToChange",
+        "type": "address"
+      }
+    ],
+    "name": "migrateBasicAll",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf71de2ed"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "ballotType",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "creator",
+        "type": "address"
+      }
+    ],
+    "name": "BallotCreated",
+    "type": "event",
+    "signature": "0xd1ba591c76ef71222e2d30b8277758713cc6eef1de29efaf98a716744ac2420b"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "voter",
+        "type": "address"
+      }
+    ],
+    "name": "BallotFinalized",
+    "type": "event",
+    "signature": "0x3b208472607d900e1f689c976139d1147afc463fa00df525e9aff8b0604d2984"
   },
   {
     "anonymous": false,
@@ -591,48 +597,15 @@
         "indexed": false,
         "name": "time",
         "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "voterMiningKey",
+        "type": "address"
       }
     ],
     "name": "Vote",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "name": "id",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "name": "voter",
-        "type": "address"
-      }
-    ],
-    "name": "BallotFinalized",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "name": "id",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "name": "ballotType",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "name": "creator",
-        "type": "address"
-      }
-    ],
-    "name": "BallotCreated",
-    "type": "event"
+    "type": "event",
+    "signature": "0x1fad44b452b708aff155b3190058d690f8a0f2e2463fc757b96d1ce1877d0ccc"
   }
 ]

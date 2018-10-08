@@ -1,0 +1,162 @@
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_receiver",
+        "type": "address"
+      },
+      {
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "sendFundsTo",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x0cd1812f"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "burnFunds",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x1995333b"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "freezeFunds",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x40b7cd3f"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "votingToManageEmissionFunds",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb26c8ff5"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_votingToManageEmissionFunds",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor",
+    "signature": "constructor"
+  },
+  {
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "fallback"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "caller",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "name": "FundsSentTo",
+    "type": "event",
+    "signature": "0x54e055e5b3ac3be6694426a1f1f1f26a2e586337ee9592657f6b0f373b0806ed"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "caller",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "name": "FundsBurnt",
+    "type": "event",
+    "signature": "0x733e8f38c94e9d04690b6b5890ee94fd939f3061c84bfdc9ff7df11163fda860"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "caller",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "FundsFrozen",
+    "type": "event",
+    "signature": "0x87bd35dd5213917fa3c4bc2cf1e339f2266264ea12945571c332c3ccd0f6b194"
+  }
+]
