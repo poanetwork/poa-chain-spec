@@ -1,0 +1,555 @@
+[
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "bool",
+                "name": ""
+            }
+        ],
+        "name": "withinForeignLimit",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_amount"
+            }
+        ],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": ""
+            }
+        ],
+        "name": "totalSpentPerDay",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_day"
+            }
+        ],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": ""
+            }
+        ],
+        "name": "foreignMaxPerTx",
+        "inputs": [],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "bool",
+                "name": ""
+            }
+        ],
+        "name": "isInitialized",
+        "inputs": [],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": ""
+            }
+        ],
+        "name": "getCurrentDay",
+        "inputs": [],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": ""
+            }
+        ],
+        "name": "requiredBlockConfirmations",
+        "inputs": [],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "bool",
+                "name": ""
+            }
+        ],
+        "name": "initialize",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_validatorContract"
+            },
+            {
+                "type": "uint256",
+                "name": "_homeDailyLimit"
+            },
+            {
+                "type": "uint256",
+                "name": "_maxPerTx"
+            },
+            {
+                "type": "uint256",
+                "name": "_minPerTx"
+            },
+            {
+                "type": "uint256",
+                "name": "_homeGasPrice"
+            },
+            {
+                "type": "uint256",
+                "name": "_requiredBlockConfirmations"
+            }
+        ],
+        "constant": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": ""
+            }
+        ],
+        "name": "totalExecutedPerDay",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_day"
+            }
+        ],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": ""
+            }
+        ],
+        "name": "gasLimitWithdrawRelay",
+        "inputs": [],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": ""
+            }
+        ],
+        "name": "homeDailyLimit",
+        "inputs": [],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": ""
+            }
+        ],
+        "name": "foreignDailyLimit",
+        "inputs": [],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "address",
+                "name": ""
+            }
+        ],
+        "name": "validatorContract",
+        "inputs": [],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": ""
+            }
+        ],
+        "name": "deployedAtBlock",
+        "inputs": [],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "payable": false,
+        "outputs": [],
+        "name": "withdraw",
+        "inputs": [
+            {
+                "type": "uint8[]",
+                "name": "vs"
+            },
+            {
+                "type": "bytes32[]",
+                "name": "rs"
+            },
+            {
+                "type": "bytes32[]",
+                "name": "ss"
+            },
+            {
+                "type": "bytes",
+                "name": "message"
+            }
+        ],
+        "constant": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "payable": false,
+        "outputs": [],
+        "name": "setMinPerTx",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_minPerTx"
+            }
+        ],
+        "constant": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "payable": false,
+        "outputs": [],
+        "name": "setRequiredBlockConfirmations",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_blockConfirmations"
+            }
+        ],
+        "constant": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "payable": false,
+        "outputs": [],
+        "name": "setHomeDailyLimit",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_homeDailyLimit"
+            }
+        ],
+        "constant": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "payable": false,
+        "outputs": [],
+        "name": "setGasLimitWithdrawRelay",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_gas"
+            }
+        ],
+        "constant": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "payable": false,
+        "outputs": [],
+        "name": "setGasPrice",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_gasPrice"
+            }
+        ],
+        "constant": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "payable": false,
+        "outputs": [],
+        "name": "setMaxPerTx",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_maxPerTx"
+            }
+        ],
+        "constant": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "payable": false,
+        "outputs": [],
+        "name": "setForeignDailyLimit",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_foreignDailyLimit"
+            }
+        ],
+        "constant": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "payable": false,
+        "outputs": [],
+        "name": "setForeignMaxPerTx",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_maxPerTx"
+            }
+        ],
+        "constant": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": ""
+            }
+        ],
+        "name": "minPerTx",
+        "inputs": [],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "bool",
+                "name": ""
+            }
+        ],
+        "name": "withdraws",
+        "inputs": [
+            {
+                "type": "bytes32",
+                "name": "_withdraw"
+            }
+        ],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "bool",
+                "name": ""
+            }
+        ],
+        "name": "withinLimit",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_amount"
+            }
+        ],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "payable": false,
+        "outputs": [],
+        "name": "upgradeFrom2To3",
+        "inputs": [],
+        "constant": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": ""
+            }
+        ],
+        "name": "maxPerTx",
+        "inputs": [],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": ""
+            }
+        ],
+        "name": "gasPrice",
+        "inputs": [],
+        "constant": true
+    },
+    {
+        "type": "fallback",
+        "stateMutability": "payable",
+        "payable": true
+    },
+    {
+        "type": "event",
+        "name": "GasConsumptionLimitsUpdated",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "gas",
+                "indexed": false
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "Deposit",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "recipient",
+                "indexed": false
+            },
+            {
+                "type": "uint256",
+                "name": "value",
+                "indexed": false
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "Withdraw",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "recipient",
+                "indexed": false
+            },
+            {
+                "type": "uint256",
+                "name": "value",
+                "indexed": false
+            },
+            {
+                "type": "bytes32",
+                "name": "transactionHash",
+                "indexed": false
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "DailyLimit",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "newLimit",
+                "indexed": false
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "ForeignDailyLimit",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "newLimit",
+                "indexed": false
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "GasPriceChanged",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "gasPrice",
+                "indexed": false
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "RequiredBlockConfirmationChanged",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "requiredBlockConfirmations",
+                "indexed": false
+            }
+        ],
+        "anonymous": false
+    }
+]
