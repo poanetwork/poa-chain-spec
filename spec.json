@@ -31,6 +31,10 @@
     "eip211Transition": "0x0",
     "eip214Transition": "0x0",
     "eip658Transition": "0x0",
+    "eip145Transition": 1604400,
+    "eip1014Transition": 1604400,
+    "eip1052Transition": 1604400,
+    "eip1283Transition": 1604400,
     "registrar": "0x1ec97dc137f5168af053c24460a1200502e1a9d2"
   },
   "genesis": {
