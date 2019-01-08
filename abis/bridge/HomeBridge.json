@@ -203,6 +203,20 @@
                 "name": ""
             }
         ],
+        "name": "owner",
+        "inputs": [],
+        "constant": true
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "address",
+                "name": ""
+            }
+        ],
         "name": "validatorContract",
         "inputs": [],
         "constant": true
@@ -336,6 +350,15 @@
         "stateMutability": "nonpayable",
         "payable": false,
         "outputs": [],
+        "name": "upgradeFrom3To4",
+        "inputs": [],
+        "constant": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "payable": false,
+        "outputs": [],
         "name": "setForeignDailyLimit",
         "inputs": [
             {
@@ -358,6 +381,20 @@
             }
         ],
         "constant": false
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "payable": false,
+        "outputs": [
+            {
+                "type": "address",
+                "name": ""
+            }
+        ],
+        "name": "upgradeabilityAdmin",
+        "inputs": [],
+        "constant": true
     },
     {
         "type": "function",
@@ -416,8 +453,13 @@
         "stateMutability": "nonpayable",
         "payable": false,
         "outputs": [],
-        "name": "upgradeFrom2To3",
-        "inputs": [],
+        "name": "transferOwnership",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "newOwner"
+            }
+        ],
         "constant": false
     },
     {
@@ -547,6 +589,23 @@
             {
                 "type": "uint256",
                 "name": "requiredBlockConfirmations",
+                "indexed": false
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "OwnershipTransferred",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "previousOwner",
+                "indexed": false
+            },
+            {
+                "type": "address",
+                "name": "newOwner",
                 "indexed": false
             }
         ],
