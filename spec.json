@@ -35,6 +35,7 @@
     "eip1014Transition": 1604400,
     "eip1052Transition": 1604400,
     "eip1283Transition": 1604400,
+    "eip1283DisableTransition": 2508800,
     "registrar": "0x1ec97dc137f5168af053c24460a1200502e1a9d2"
   },
   "genesis": {
