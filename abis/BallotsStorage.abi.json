@@ -1,20 +1,18 @@
 [
   {
-    "anonymous": false,
-    "inputs": [
+    "constant": true,
+    "inputs": [],
+    "name": "getMaxLimitBallot",
+    "outputs": [
       {
-        "indexed": true,
-        "name": "thresholdType",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "name": "newValue",
+        "name": "",
         "type": "uint256"
       }
     ],
-    "name": "ThresholdChanged",
-    "type": "event"
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x247b3210"
   },
   {
     "constant": true,
@@ -45,21 +43,28 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x3fd626d4"
   },
   {
     "constant": true,
-    "inputs": [],
-    "name": "proxyStorage",
+    "inputs": [
+      {
+        "name": "_ballotType",
+        "type": "uint256"
+      }
+    ],
+    "name": "getBallotThreshold",
     "outputs": [
       {
         "name": "",
-        "type": "address"
+        "type": "uint256"
       }
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0x45e23b53"
   },
   {
     "constant": true,
@@ -73,21 +78,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_thresholds",
-        "type": "uint256[]"
-      }
-    ],
-    "name": "init",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0x52a36938"
   },
   {
     "constant": true,
@@ -101,21 +93,23 @@
     ],
     "payable": false,
     "stateMutability": "pure",
-    "type": "function"
+    "type": "function",
+    "signature": "0x93673620"
   },
   {
-    "constant": false,
-    "inputs": [
+    "constant": true,
+    "inputs": [],
+    "name": "proxyStorage",
+    "outputs": [
       {
-        "name": "_prevBallotsStorage",
+        "name": "",
         "type": "address"
       }
     ],
-    "name": "migrate",
-    "outputs": [],
     "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xae4b1b5b"
   },
   {
     "constant": false,
@@ -138,26 +132,23 @@
     ],
     "payable": false,
     "stateMutability": "nonpayable",
-    "type": "function"
+    "type": "function",
+    "signature": "0xb9c36209"
   },
   {
-    "constant": true,
+    "constant": false,
     "inputs": [
       {
-        "name": "_ballotType",
-        "type": "uint256"
+        "name": "_prevBallotsStorage",
+        "type": "address"
       }
     ],
-    "name": "getBallotThreshold",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
+    "name": "migrate",
+    "outputs": [],
     "payable": false,
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xce5494bb"
   },
   {
     "constant": true,
@@ -171,7 +162,23 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xd1104cb2"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_thresholds",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "init",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xd88b06db"
   },
   {
     "constant": true,
@@ -185,7 +192,8 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xeecd1079"
   },
   {
     "constant": true,
@@ -199,20 +207,25 @@
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "signature": "0xfcff021c"
   },
   {
-    "constant": true,
-    "inputs": [],
-    "name": "getMaxLimitBallot",
-    "outputs": [
+    "anonymous": false,
+    "inputs": [
       {
-        "name": "",
+        "indexed": true,
+        "name": "thresholdType",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "newValue",
         "type": "uint256"
       }
     ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
+    "name": "ThresholdChanged",
+    "type": "event",
+    "signature": "0x3164947cf0f49f08dd0cd80e671535b1e11590d347c55dcaa97ba3c24a96b33a"
   }
 ]
