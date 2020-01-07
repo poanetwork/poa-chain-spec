@@ -10,15 +10,12 @@
         "validators": {
           "multi": {
             "0": {
-              "list": ["0xcace5b3c29211740e595850e80478416ee77ca21"]
-            },
-            "1300": {
-              "safeContract": "0x22e1229a2c5b95a60983b5577f745a603284f535"
+              "list": [
+                "0xa335b951b812a1128b8eb09c1e27081b502680e6"
+              ]
             }
           }
-        },
-        "blockRewardContractAddress": "0x867305d19606aadba405ce534e303d0e225f9556",
-        "blockRewardContractTransition": 1310
+        }
       }
     }
   },
@@ -31,17 +28,14 @@
     "eip211Transition": "0x0",
     "eip214Transition": "0x0",
     "eip658Transition": "0x0",
-    "eip145Transition": 1604400,
-    "eip1014Transition": 1604400,
-    "eip1052Transition": 1604400,
-    "eip1283Transition": 1604400,
-    "eip1283DisableTransition": 2508800,
-    "eip1283ReenableTransition": 7298030,
-    "eip1344Transition": 7298030,
-    "eip1706Transition": 7298030,
-    "eip1884Transition": 7298030,
-    "eip2028Transition": 7298030,
-    "registrar": "0x1ec97dc137f5168af053c24460a1200502e1a9d2"
+    "eip145Transition": "0x0",
+    "eip1014Transition": "0x0",
+    "eip1052Transition": "0x0",
+    "eip1283Transition": "0x0",
+    "eip1344Transition": "0x0",
+    "eip1706Transition": "0x0",
+    "eip1884Transition": "0x0",
+    "eip2028Transition": "0x0"
   },
   "genesis": {
     "seal": {
@@ -75,14 +69,6 @@
           "0": {
             "price": {
               "alt_bn128_const_operations": {
-                "price": 500
-              }
-            }
-          },
-          "7298030": {
-            "info": "Istanbul HF",
-            "price": {
-              "alt_bn128_const_operations": {
                 "price": 150
               }
             }
@@ -95,14 +81,6 @@
         "name": "alt_bn128_mul",
         "pricing": {
           "0": {
-            "price": {
-              "alt_bn128_const_operations": {
-                "price": 40000
-              }
-            }
-          },
-          "7298030": {
-            "info": "Istanbul HF",
             "price": {
               "alt_bn128_const_operations": {
                 "price": 6000
@@ -119,15 +97,6 @@
           "0": {
             "price": {
               "alt_bn128_pairing": {
-                "base": 100000,
-                "pair": 80000
-              }
-            }
-          },
-          "7298030": {
-            "info": "Istanbul HF",
-            "price": {
-              "alt_bn128_pairing": {
                 "base": 45000,
                 "pair": 34000
               }
@@ -140,8 +109,7 @@
       "builtin": {
         "name": "blake2_f",
         "pricing": {
-          "7298030": {
-            "info": "Istanbul HF",
+          "0": {
             "price": {
               "blake2_f": {
                 "gas_per_round": 1

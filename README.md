@@ -1,24 +1,3 @@
-# Configuration file for `POA Network` networks
+# Initial configuration file for `xDai` network.
 
-Each network must have branch with `spec.json`, `bootnodes.txt`.
-If there are scripts, they should be in `script/` directory.
-
-## Network IDs
-
-- 99 or `0x63` - Core, livenet
-- 77 or `0x4D` - Sokol, testnet
-- 78 or `0x4E` - Red, testnet for security testing
-- 79 or `0x4F` - Dai testnet
-- 100 or `0x64` - Dai Chain
-
-
-## Contribution guides
-
-Modification of `spec.json` file without an approved PR is prohibited.
-
-List of approvers:
-
-- Igor Barinov
-- Viktor Baranov
-- Pavel Khahulin
-- Vadim Arasev
+Used by the deployment instruction https://www.xdaichain.com/for-developers/stable-chain-network-deployment
