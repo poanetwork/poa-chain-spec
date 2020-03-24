@@ -20,5 +20,4 @@ List of approvers:
 
 - Igor Barinov
 - Viktor Baranov
-- Pavel Khahulin
 - Vadim Arasev

@@ -1,0 +1,937 @@
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "addBridgeTokenFeeReceivers",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x128b265f"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "snapshotPoolValidatorStakeAmount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x1345b8a5"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_bridgesAllowed",
+        "type": "address[]"
+      }
+    ],
+    "name": "setErcToNativeBridgesAllowed",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x171d54dd"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "addBridgeNativeRewardReceivers",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x222fafb2"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "blockRewardContractId",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes4"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "pure",
+    "type": "function",
+    "signature": "0x2ee57f8d"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "mintedForAccountInBlock",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x30f6eb16"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "epochPoolNativeReward",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x33d69921"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "isInitialized",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x392e53cd"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "mintedForAccount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x3d84b8c1"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "ercToNativeBridgesAllowed",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x419ce264"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "mintedInBlock",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x4476d66a"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_validatorSet",
+        "type": "address"
+      },
+      {
+        "name": "_prevBlockReward",
+        "type": "address"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x485cc955"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "STAKE_TOKEN_INFLATION_RATE",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x4b6368cf"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_poolStakingAddress",
+        "type": "address"
+      },
+      {
+        "name": "_staker",
+        "type": "address"
+      }
+    ],
+    "name": "epochsToClaimRewardFrom",
+    "outputs": [
+      {
+        "name": "epochsToClaimFrom",
+        "type": "uint256[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x4de6c036"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_stakingAddress",
+        "type": "address"
+      }
+    ],
+    "name": "validatorRewardPercent",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x527d8bc4"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "addBridgeNativeFeeReceivers",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x53251389"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "mintedTotally",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x553a5c85"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_stakingEpoch",
+        "type": "uint256"
+      },
+      {
+        "name": "_delegatorStaked",
+        "type": "uint256"
+      },
+      {
+        "name": "_validatorStaked",
+        "type": "uint256"
+      },
+      {
+        "name": "_totalStaked",
+        "type": "uint256"
+      },
+      {
+        "name": "_poolReward",
+        "type": "uint256"
+      }
+    ],
+    "name": "delegatorShare",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x5fba554e"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "addBridgeTokenRewardReceivers",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x62178478"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_bridgesAllowed",
+        "type": "address[]"
+      }
+    ],
+    "name": "setNativeToErcBridgesAllowed",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x6834fc90"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "tokenRewardUndistributed",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x68c49f3d"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_tokens",
+        "type": "uint256"
+      },
+      {
+        "name": "_nativeCoins",
+        "type": "uint256"
+      },
+      {
+        "name": "_to",
+        "type": "address"
+      }
+    ],
+    "name": "transferReward",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x70cafd65"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "snapshotPoolTotalStakeAmount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x728345db"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_stakingEpoch",
+        "type": "uint256"
+      },
+      {
+        "name": "_validatorStaked",
+        "type": "uint256"
+      },
+      {
+        "name": "_totalStaked",
+        "type": "uint256"
+      },
+      {
+        "name": "_poolReward",
+        "type": "uint256"
+      }
+    ],
+    "name": "validatorShare",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x8737929a"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_bridgesAllowed",
+        "type": "address[]"
+      }
+    ],
+    "name": "setErcToErcBridgesAllowed",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x8c439867"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "ercToErcBridgesAllowed",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x9a0a9fdc"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "name": "onTokenTransfer",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "pure",
+    "type": "function",
+    "signature": "0xa4c0ed36"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "extraReceiversQueueSize",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xa9add57d"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_amount",
+        "type": "uint256"
+      },
+      {
+        "name": "_receiver",
+        "type": "address"
+      }
+    ],
+    "name": "addExtraReceiver",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xaa9fa274"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "bridgeNativeReward",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xac8a0942"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "nativeRewardUndistributed",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xadc481a7"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "nativeToErcBridgesAllowed",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb25a00fd"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "mintedTotallyByBridge",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb4a523e8"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "epochPoolTokenReward",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb5c1e8cf"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_stakingEpoch",
+        "type": "uint256"
+      },
+      {
+        "name": "_poolMiningAddress",
+        "type": "address"
+      }
+    ],
+    "name": "getValidatorReward",
+    "outputs": [
+      {
+        "name": "tokenReward",
+        "type": "uint256"
+      },
+      {
+        "name": "nativeReward",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xba2d7597"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "clearBlocksCreated",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xc5dd7628"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "validatorMinRewardPercent",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xcdf7a090"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_miningAddress",
+        "type": "address"
+      }
+    ],
+    "name": "epochsPoolGotRewardFor",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xdd03f5b9"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "validatorSetContract",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xdfc8bf4e"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_delegatorStake",
+        "type": "uint256"
+      },
+      {
+        "name": "_stakingEpoch",
+        "type": "uint256"
+      },
+      {
+        "name": "_poolMiningAddress",
+        "type": "address"
+      }
+    ],
+    "name": "getDelegatorReward",
+    "outputs": [
+      {
+        "name": "tokenReward",
+        "type": "uint256"
+      },
+      {
+        "name": "nativeReward",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xe1ab96d8"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "blocksCreated",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xf7f8fd37"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "benefactors",
+        "type": "address[]"
+      },
+      {
+        "name": "kind",
+        "type": "uint16[]"
+      }
+    ],
+    "name": "reward",
+    "outputs": [
+      {
+        "name": "receiversNative",
+        "type": "address[]"
+      },
+      {
+        "name": "rewardsNative",
+        "type": "uint256[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf91c2898"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "bridgeTokenReward",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xfaaf3aff"
+  },
+  {
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "fallback"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "cumulativeAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "bridge",
+        "type": "address"
+      }
+    ],
+    "name": "BridgeTokenRewardAdded",
+    "type": "event",
+    "signature": "0x412edf02d82089ccd9d6158ca78bb761a19c8f63a840cff791e4ad472bcaa0ac"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "receiver",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "bridge",
+        "type": "address"
+      }
+    ],
+    "name": "AddedReceiver",
+    "type": "event",
+    "signature": "0x3c798bbcf33115b42c728b8504cff11dd58736e9fa789f1cda2738db7d696b2a"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "cumulativeAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "bridge",
+        "type": "address"
+      }
+    ],
+    "name": "BridgeNativeRewardAdded",
+    "type": "event",
+    "signature": "0x619cc90cbd264bea3dfc113e68fd307789a937a8c10ef4b0110607ac74903673"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "receivers",
+        "type": "address[]"
+      },
+      {
+        "indexed": false,
+        "name": "rewards",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "MintedNative",
+    "type": "event",
+    "signature": "0x2834f3daea15e82b5f27095c4b6d08cd437f303149009a0a3304be801d2dd7ce"
+  }
+]

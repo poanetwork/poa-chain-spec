@@ -1,0 +1,777 @@
+[
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "miningByStakingAddress",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x00535175"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "bannedDelegatorsUntil",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x1a7fa237"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "banCounter",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x1d0cd4c6"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "stakingByMiningAddress",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x1ee4d0bc"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "reportingCounter",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x3755243b"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "blockRewardContract",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x56b54bae"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "bannedUntil",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x5836d08a"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "unremovableValidator",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x704189ca"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "MAX_VALIDATORS",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x714897df"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "isValidatorPrevious",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xa68b5b76"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "validatorCounter",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb41832e4"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "validatorSetApplyBlock",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb927ef43"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "banReason",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc9e9694d"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "randomContract",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xccf69e9b"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "changeRequestCount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xd2077782"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "reportingCounterTotal",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xd2dd2f16"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "stakingContract",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xee99205c"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "isValidator",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xfacd743b"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "parentHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "name": "newSet",
+        "type": "address[]"
+      }
+    ],
+    "name": "InitiateChange",
+    "type": "event",
+    "signature": "0x55252fa6eee4741b4e24a74a70e9c11fd2c2281df8d6ea13126ff845f7825c89"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "reportingValidator",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "maliciousValidator",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "blockNumber",
+        "type": "uint256"
+      }
+    ],
+    "name": "ReportedMalicious",
+    "type": "event",
+    "signature": "0x729a19138e072a5a8d3a56d74ae0b5c84530f09aacd6e12b24c5b2fdc3f8a3d0"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "clearUnremovableValidator",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x7218744b"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "emitInitiateChange",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x93b4e25e"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "finalizeChange",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x75286211"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_blockRewardContract",
+        "type": "address"
+      },
+      {
+        "name": "_randomContract",
+        "type": "address"
+      },
+      {
+        "name": "_stakingContract",
+        "type": "address"
+      },
+      {
+        "name": "_initialMiningAddresses",
+        "type": "address[]"
+      },
+      {
+        "name": "_initialStakingAddresses",
+        "type": "address[]"
+      },
+      {
+        "name": "_firstValidatorIsUnremovable",
+        "type": "bool"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x9ea4b0ca"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "newValidatorSet",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x5ccee1de"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_miningAddresses",
+        "type": "address[]"
+      }
+    ],
+    "name": "removeMaliciousValidators",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x0636bdac"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_maliciousMiningAddress",
+        "type": "address"
+      },
+      {
+        "name": "_blockNumber",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "name": "reportMalicious",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xc476dd40"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_miningAddress",
+        "type": "address"
+      },
+      {
+        "name": "_stakingAddress",
+        "type": "address"
+      }
+    ],
+    "name": "setStakingAddress",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x0a4c1072"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_miningAddress",
+        "type": "address"
+      }
+    ],
+    "name": "areDelegatorsBanned",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xa881c5fd"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "emitInitiateChangeCallable",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x3d3b5458"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getPreviousValidators",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x85602ad5"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getPendingValidators",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xeebc7a39"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getValidators",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb7ab4db5"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "initiateChangeAllowed",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x1776dee3"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "isInitialized",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x392e53cd"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_miningAddress",
+        "type": "address"
+      }
+    ],
+    "name": "isReportValidatorValid",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x87eed76a"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_miningAddress",
+        "type": "address"
+      }
+    ],
+    "name": "isValidatorBanned",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xa92252ae"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_miningAddress",
+        "type": "address"
+      }
+    ],
+    "name": "isValidatorOrPending",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xa0d16cad"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_miningAddress",
+        "type": "address"
+      },
+      {
+        "name": "_blockNumber",
+        "type": "uint256"
+      }
+    ],
+    "name": "maliceReportedForBlock",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb56b366b"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_reportingMiningAddress",
+        "type": "address"
+      },
+      {
+        "name": "_maliciousMiningAddress",
+        "type": "address"
+      },
+      {
+        "name": "_blockNumber",
+        "type": "uint256"
+      }
+    ],
+    "name": "reportMaliciousCallable",
+    "outputs": [
+      {
+        "name": "callable",
+        "type": "bool"
+      },
+      {
+        "name": "removeReportingValidator",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xa670eb56"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_reportingMiningAddress",
+        "type": "address"
+      },
+      {
+        "name": "_maliciousMiningAddress",
+        "type": "address"
+      },
+      {
+        "name": "_blockNumber",
+        "type": "uint256"
+      }
+    ],
+    "name": "shouldValidatorReport",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xcbd2d528"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "validatorsToBeFinalized",
+    "outputs": [
+      {
+        "name": "miningAddresses",
+        "type": "address[]"
+      },
+      {
+        "name": "forNewEpoch",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x004a8803"
+  }
+]
