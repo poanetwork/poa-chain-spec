@@ -1,0 +1,696 @@
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_new",
+        "type": "address"
+      }
+    ],
+    "name": "setOwner",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x13af4035"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x8da5cb5b"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "fee",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xddca3f43"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_certifierContract",
+        "type": "address"
+      },
+      {
+        "name": "_owner",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor",
+    "signature": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "Drained",
+    "type": "event",
+    "signature": "0xdef931299fe61d176f949118058530c1f3f539dcb6950b4e372c9b835c33ca07"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "FeeChanged",
+    "type": "event",
+    "signature": "0x6bbc57480a46553fa4d156ce702beef5f3ad66303b0ed1a5d4cb44966c6584c3"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": true,
+        "name": "reverse",
+        "type": "address"
+      }
+    ],
+    "name": "ReverseProposed",
+    "type": "event",
+    "signature": "0x728435a0031f6a04538fcdd24922a7e06bc7bc945db03e83d22122d1bc5f28df"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": true,
+        "name": "reverse",
+        "type": "address"
+      }
+    ],
+    "name": "ReverseConfirmed",
+    "type": "event",
+    "signature": "0x098ae8581bb8bd9af1beaf7f2e9f51f31a8e5a8bfada4e303a645d71d9c91920"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": true,
+        "name": "reverse",
+        "type": "address"
+      }
+    ],
+    "name": "ReverseRemoved",
+    "type": "event",
+    "signature": "0x12491ad95fd945e444d88a894ffad3c21959880a4dcd8af99d4ae4ffc71d4abd"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "name",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "name": "Reserved",
+    "type": "event",
+    "signature": "0x4963513eca575aba66fdcd25f267aae85958fe6fb97e75fa25d783f1a091a221"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "name",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "name": "oldOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "Transferred",
+    "type": "event",
+    "signature": "0x7b97c62130aa09acbbcbf7482630e756592496f1759eaf702f469cf64dfb7794"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "name",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "name": "Dropped",
+    "type": "event",
+    "signature": "0xef1961b4d2909dc23643b309bfe5c3e5646842d98c3a58517037ef3871185af3"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "name",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "name": "key",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "plainKey",
+        "type": "string"
+      }
+    ],
+    "name": "DataChanged",
+    "type": "event",
+    "signature": "0xb829c3e412537bbe794c048ccb9e4605bb4aaaa8e4d4c15c1a6e0c2adc1716ea"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "old",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "current",
+        "type": "address"
+      }
+    ],
+    "name": "NewOwner",
+    "type": "event",
+    "signature": "0x70aea8d848e8a90fb7661b227dc522eb6395c3dac71b63cb59edd5c9899b2364"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "bytes32"
+      }
+    ],
+    "name": "reserve",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function",
+    "signature": "0x432ced04"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "bytes32"
+      },
+      {
+        "name": "_to",
+        "type": "address"
+      }
+    ],
+    "name": "transfer",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x79ce9fac"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "bytes32"
+      }
+    ],
+    "name": "drop",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x4f39ca59"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "bytes32"
+      },
+      {
+        "name": "_key",
+        "type": "string"
+      },
+      {
+        "name": "_value",
+        "type": "bytes32"
+      }
+    ],
+    "name": "setData",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x19362a28"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "bytes32"
+      },
+      {
+        "name": "_key",
+        "type": "string"
+      },
+      {
+        "name": "_value",
+        "type": "address"
+      }
+    ],
+    "name": "setAddress",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf6d339e4"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "bytes32"
+      },
+      {
+        "name": "_key",
+        "type": "string"
+      },
+      {
+        "name": "_value",
+        "type": "uint256"
+      }
+    ],
+    "name": "setUint",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xeadf9760"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "name": "_who",
+        "type": "address"
+      }
+    ],
+    "name": "proposeReverse",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xac4e73f9"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "string"
+      }
+    ],
+    "name": "confirmReverse",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x3f3935d1"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "name": "_who",
+        "type": "address"
+      }
+    ],
+    "name": "confirmReverseAs",
+    "outputs": [
+      {
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xef5454d6"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "removeReverse",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xf25eb5c1"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "setFee",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x69fe0e2d"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "drain",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x9890220b"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "bytes32"
+      },
+      {
+        "name": "_key",
+        "type": "string"
+      }
+    ],
+    "name": "getData",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x90b97fc1"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "bytes32"
+      },
+      {
+        "name": "_key",
+        "type": "string"
+      }
+    ],
+    "name": "getAddress",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x6795dbcd"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "bytes32"
+      },
+      {
+        "name": "_key",
+        "type": "string"
+      }
+    ],
+    "name": "getUint",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xc3a35825"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getOwner",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xdeb931a2"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "bytes32"
+      }
+    ],
+    "name": "hasReverse",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xac72c120"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getReverse",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xdf57b742"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_data",
+        "type": "address"
+      }
+    ],
+    "name": "canReverse",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x06b2ff47"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_data",
+        "type": "address"
+      }
+    ],
+    "name": "reverse",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xe30bd740"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "bytes32"
+      }
+    ],
+    "name": "reserved",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x92698814"
+  }
+]

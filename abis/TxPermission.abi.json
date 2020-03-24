@@ -1,0 +1,265 @@
+[
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "certifierContract",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x1a9ebeaa"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "BLOCK_GAS_LIMIT_REDUCED",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x1b9f67a1"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "BLOCK_GAS_LIMIT",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xd9eb2d5e"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "validatorSetContract",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xdfc8bf4e"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "isSenderAllowed",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xefc78401"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_allowed",
+        "type": "address[]"
+      },
+      {
+        "name": "_certifier",
+        "type": "address"
+      },
+      {
+        "name": "_validatorSet",
+        "type": "address"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x90482d72"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_sender",
+        "type": "address"
+      }
+    ],
+    "name": "addAllowedSender",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xc746c8f4"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_sender",
+        "type": "address"
+      }
+    ],
+    "name": "removeAllowedSender",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x471eab5c"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "contractName",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "pure",
+    "type": "function",
+    "signature": "0x75d0c0dc"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "contractNameHash",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "pure",
+    "type": "function",
+    "signature": "0x469ab1e3"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "contractVersion",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "pure",
+    "type": "function",
+    "signature": "0xa0a8e460"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "allowedSenders",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x3272b28c"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_sender",
+        "type": "address"
+      },
+      {
+        "name": "_to",
+        "type": "address"
+      },
+      {
+        "name": "_value",
+        "type": "uint256"
+      },
+      {
+        "name": "_gasPrice",
+        "type": "uint256"
+      },
+      {
+        "name": "_data",
+        "type": "bytes"
+      }
+    ],
+    "name": "allowedTxTypes",
+    "outputs": [
+      {
+        "name": "typesMask",
+        "type": "uint32"
+      },
+      {
+        "name": "cache",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xb9056afa"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "blockGasLimit",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x7877a797"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "isInitialized",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x392e53cd"
+  }
+]
