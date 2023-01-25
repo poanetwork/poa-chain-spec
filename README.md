@@ -1,4 +1,4 @@
-# Bellecour Network
+# iExec Sidechain
 
 Chain specs of iExec's sidechain.  
 
