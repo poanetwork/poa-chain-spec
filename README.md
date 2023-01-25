@@ -1,23 +1,22 @@
-# Configuration file for `POA Network` networks
+# Bellecour Network
 
-Each network must have branch with `spec.json`, `bootnodes.txt`.
-If there are scripts, they should be in `script/` directory.
-
-## Network IDs
-
-- 99 or `0x63` - Core, livenet
-- 77 or `0x4D` - Sokol, testnet
-- 78 or `0x4E` - Red, testnet for security testing
-- 100 or `0x64` - xDai Chain
+Chain specs of iExec's sidechain.  
 
 
-## Contribution guides
+### Network information
+* Id: 134 or `0x86`
+* RPC: https://bellecour.iex.ec
+* Explorer: https://blockscout-bellecour.iex.ec
 
-Modification of `spec.json` file without an approved PR is prohibited.
+### Governance Dapps:
+* [Keys generation](https://github.com/iExecBlockchainComputing/poa-dapps-keys-generation/tree/bellecour)
+* [Voting](https://github.com/iExecBlockchainComputing/poa-dapps-voting/tree/bellecour)
+* [Validators](https://github.com/iExecBlockchainComputing/poa-dapps-validators/tree/bellecour)
 
-List of approvers:
+### Network Consensus
+* [poa-network-consensus-contracts](https://github.com/iExecBlockchainComputing/poa-network-consensus-contracts/tree/bellecour)
 
-- Igor Barinov
-- Viktor Baranov
-- Pavel Khahulin
-- Vadim Arasev
+### Bridge
+* [UI](https://github.com/iExecBlockchainComputing/tokenbridge/tree/bellecour/ui)
+* [Contracts](https://github.com/iExecBlockchainComputing/poa-bridge-contracts)
+* [Oracles](https://github.com/iExecBlockchainComputing/tokenbridge/tree/bellecour/oracle)
