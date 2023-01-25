@@ -1,0 +1,333 @@
+{
+  "contractName": "RevertFallback",
+  "abi": [
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "receiveEth",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"receiveEth\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/contracts/contracts/mocks/RevertFallback.sol\":\"RevertFallback\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/contracts/contracts/mocks/RevertFallback.sol\":{\"keccak256\":\"0xf4f0e78b47e2c630b17df56ec921e41576d94a39ba6af5dbed32b60d51fa6493\",\"urls\":[\"bzzr://687a823d934979302cbf3c3c7b084248daf0a77ad9a9fa98b185f4f8c315fbbd\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060798061001e6000396000f300608060405260043610603e5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634185f8eb81146043575b600080fd5b6049604b565b005b5600a165627a7a723058200c15b9a8ef6df9d6ac02fb64bd8813db253cacf809f691df37174faf423d0b2b0029",
+  "deployedBytecode": "0x608060405260043610603e5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416634185f8eb81146043575b600080fd5b6049604b565b005b5600a165627a7a723058200c15b9a8ef6df9d6ac02fb64bd8813db253cacf809f691df37174faf423d0b2b0029",
+  "sourceMap": "25:190:22:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:190:22;;;;;;;",
+  "deployedSourceMap": "25:190:22:-;;;;;;;;;;;;;;;;;;;;91:8;;;112:101;;;;;;;:::o",
+  "source": "pragma solidity 0.4.24;\n\ncontract RevertFallback {\n    function() public payable {\n        revert();\n    }\n\n    function receiveEth() public payable {\n        // solhint-disable-previous-line no-empty-blocks\n    }\n}\n",
+  "sourcePath": "/contracts/contracts/mocks/RevertFallback.sol",
+  "ast": {
+    "absolutePath": "/contracts/contracts/mocks/RevertFallback.sol",
+    "exportedSymbols": {
+      "RevertFallback": [
+        2360
+      ]
+    },
+    "id": 2361,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2348,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:22"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2360,
+        "linearizedBaseContracts": [
+          2360
+        ],
+        "name": "RevertFallback",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2354,
+              "nodeType": "Block",
+              "src": "81:25:22",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 2351,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        12644,
+                        12645
+                      ],
+                      "referencedDeclaration": 12644,
+                      "src": "91:6:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 2352,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "91:8:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2353,
+                  "nodeType": "ExpressionStatement",
+                  "src": "91:8:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2355,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2349,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "63:2:22"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 2350,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "81:0:22"
+            },
+            "scope": 2360,
+            "src": "55:51:22",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2358,
+              "nodeType": "Block",
+              "src": "149:64:22",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2359,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "receiveEth",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2356,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "131:2:22"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 2357,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "149:0:22"
+            },
+            "scope": 2360,
+            "src": "112:101:22",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2361,
+        "src": "25:190:22"
+      }
+    ],
+    "src": "0:216:22"
+  },
+  "legacyAST": {
+    "absolutePath": "/contracts/contracts/mocks/RevertFallback.sol",
+    "exportedSymbols": {
+      "RevertFallback": [
+        2360
+      ]
+    },
+    "id": 2361,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2348,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:22"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2360,
+        "linearizedBaseContracts": [
+          2360
+        ],
+        "name": "RevertFallback",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2354,
+              "nodeType": "Block",
+              "src": "81:25:22",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 2351,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        12644,
+                        12645
+                      ],
+                      "referencedDeclaration": 12644,
+                      "src": "91:6:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 2352,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "91:8:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2353,
+                  "nodeType": "ExpressionStatement",
+                  "src": "91:8:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2355,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2349,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "63:2:22"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 2350,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "81:0:22"
+            },
+            "scope": 2360,
+            "src": "55:51:22",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2358,
+              "nodeType": "Block",
+              "src": "149:64:22",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2359,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "receiveEth",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2356,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "131:2:22"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 2357,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "149:0:22"
+            },
+            "scope": 2360,
+            "src": "112:101:22",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2361,
+        "src": "25:190:22"
+      }
+    ],
+    "src": "0:216:22"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-09-30T13:18:39.247Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,1173 @@
+{
+  "contractName": "Validatable",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "validatorContract",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "requiredSignatures",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"requiredSignatures\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"validatorContract\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/contracts/contracts/upgradeable_contracts/Validatable.sol\":\"Validatable\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/contracts/contracts/interfaces/IBridgeValidators.sol\":{\"keccak256\":\"0xb15095cb0791d9286cc4a9c8decee98fd38b4aac9fdcaaac87b19e6851c10f17\",\"urls\":[\"bzzr://80d1920101d3109f56d342a04828db2110e5f8ec1413e7d6b9e82dc89ff8dbe9\"]},\"/contracts/contracts/upgradeability/EternalStorage.sol\":{\"keccak256\":\"0x8f2df79a1cda812d4be25da8f2b138f9b7492e76da1dfba21d87012e649cc51c\",\"urls\":[\"bzzr://0846d08e1b7a84e541ae31c91d2c0b34d88cf3abbd18891ec6eedeea7e958af2\"]},\"/contracts/contracts/upgradeable_contracts/Validatable.sol\":{\"keccak256\":\"0x5477247b177ea91b340f22121747e72c48c8ca734c5e0c00f76fcde9cdd80524\",\"urls\":[\"bzzr://3dd4e24295bec2cb564570c5e8927299e66509d33ba13924746ea84e48ab3398\"]},\"/contracts/contracts/upgradeable_contracts/ValidatorStorage.sol\":{\"keccak256\":\"0xb14d586801f29eb0da69ae65c614cd86a1d57ea91d06dd3930a4fe001a7736f7\",\"urls\":[\"bzzr://b42937b8bfd1be92c3c0dfa79902314e8270b49c85ca3516829695a56b779cdd\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061024a806100206000396000f30060806040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638d06804381146100505780639943908914610077575b600080fd5b34801561005c57600080fd5b506100656100b5565b60408051918252519081900360200190f35b34801561008357600080fd5b5061008c610153565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b60006100bf610153565b73ffffffffffffffffffffffffffffffffffffffff16638d0680436040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15801561012257600080fd5b505af1158015610136573d6000803e3d6000fd5b505050506040513d602081101561014c57600080fd5b5051905090565b60006002600060405160200180807f76616c696461746f72436f6e747261637400000000000000000000000000000081525060110190506040516020818303038152906040526040518082805190602001908083835b602083106101c85780518252601f1990920191602091820191016101a9565b51815160209384036101000a600019018019909216911617905260408051929094018290039091208652850195909552929092016000205473ffffffffffffffffffffffffffffffffffffffff169493505050505600a165627a7a723058202ba380615193b29b17683c19c068e5ce932d43537f5f0f428007af3f7dd4c31e0029",
+  "deployedBytecode": "0x60806040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638d06804381146100505780639943908914610077575b600080fd5b34801561005c57600080fd5b506100656100b5565b60408051918252519081900360200190f35b34801561008357600080fd5b5061008c610153565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b60006100bf610153565b73ffffffffffffffffffffffffffffffffffffffff16638d0680436040518163ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401602060405180830381600087803b15801561012257600080fd5b505af1158015610136573d6000803e3d6000fd5b505050506040513d602081101561014c57600080fd5b5051905090565b60006002600060405160200180807f76616c696461746f72436f6e747261637400000000000000000000000000000081525060110190506040516020818303038152906040526040518082805190602001908083835b602083106101c85780518252601f1990920191602091820191016101a9565b51815160209384036101000a600019018019909216911617905260408051929094018290039091208652850195909552929092016000205473ffffffffffffffffffffffffffffffffffffffff169493505050505600a165627a7a723058202ba380615193b29b17683c19c068e5ce932d43537f5f0f428007af3f7dd4c31e0029",
+  "sourceMap": "152:486:55:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;152:486:55;;;;;;;",
+  "deployedSourceMap": "152:486:55:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;511:124;;8:9:-1;5:2;;;30:1;27;20:12;5:2;511:124:55;;;;;;;;;;;;;;;;;;;;215:146;;8:9:-1;5:2;;;30:1;27;20:12;5:2;215:146:55;;;;;;;;;;;;;;;;;;;;;;;511:124;562:7;588:19;:17;:19::i;:::-;:38;;;:40;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;588:40:55;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;588:40:55;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;588:40:55;;-1:-1:-1;511:124:55;:::o;215:146::-;265:17;319:14;:34;114:37:56;;;;;;;;;;;;;;;;49:4:-1;39:7;30;26:21;22:32;13:7;6:49;114:37:56;;;104:48;;;;;;;;;;;;;36:153:-1;66:2;58:11;;36:153;;176:10;;164:23;;-1:-1;;139:12;;;;98:2;89:12;;;;114;36:153;;;299:10;344;;263:2;259:12;;;254:3;250:22;-1:-1;;246:30;311:9;;295:26;;;340:21;;377:20;365:33;;104:48:56;;;;;;;;;;;;;319:34:55;;;;;;;;;;;;-1:-1:-1;319:34:55;;;;;215:146;-1:-1:-1;;;;215:146:55:o",
+  "source": "pragma solidity 0.4.24;\n\nimport \"../interfaces/IBridgeValidators.sol\";\nimport \"../upgradeability/EternalStorage.sol\";\nimport \"./ValidatorStorage.sol\";\n\ncontract Validatable is EternalStorage, ValidatorStorage {\n    function validatorContract() public view returns (IBridgeValidators) {\n        return IBridgeValidators(addressStorage[VALIDATOR_CONTRACT]);\n    }\n\n    modifier onlyValidator() {\n        require(validatorContract().isValidator(msg.sender));\n        /* solcov ignore next */\n        _;\n    }\n\n    function requiredSignatures() public view returns (uint256) {\n        return validatorContract().requiredSignatures();\n    }\n\n}\n",
+  "sourcePath": "/contracts/contracts/upgradeable_contracts/Validatable.sol",
+  "ast": {
+    "absolutePath": "/contracts/contracts/upgradeable_contracts/Validatable.sol",
+    "exportedSymbols": {
+      "Validatable": [
+        6479
+      ]
+    },
+    "id": 6480,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6435,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:55"
+      },
+      {
+        "absolutePath": "/contracts/contracts/interfaces/IBridgeValidators.sol",
+        "file": "../interfaces/IBridgeValidators.sol",
+        "id": 6436,
+        "nodeType": "ImportDirective",
+        "scope": 6480,
+        "sourceUnit": 732,
+        "src": "25:45:55",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/contracts/contracts/upgradeability/EternalStorage.sol",
+        "file": "../upgradeability/EternalStorage.sol",
+        "id": 6437,
+        "nodeType": "ImportDirective",
+        "scope": 6480,
+        "sourceUnit": 2460,
+        "src": "71:46:55",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/contracts/contracts/upgradeable_contracts/ValidatorStorage.sol",
+        "file": "./ValidatorStorage.sol",
+        "id": 6438,
+        "nodeType": "ImportDirective",
+        "scope": 6480,
+        "sourceUnit": 6491,
+        "src": "118:32:55",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6439,
+              "name": "EternalStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2459,
+              "src": "176:14:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_EternalStorage_$2459",
+                "typeString": "contract EternalStorage"
+              }
+            },
+            "id": 6440,
+            "nodeType": "InheritanceSpecifier",
+            "src": "176:14:55"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6441,
+              "name": "ValidatorStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6490,
+              "src": "192:16:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ValidatorStorage_$6490",
+                "typeString": "contract ValidatorStorage"
+              }
+            },
+            "id": 6442,
+            "nodeType": "InheritanceSpecifier",
+            "src": "192:16:55"
+          }
+        ],
+        "contractDependencies": [
+          2459,
+          6490
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6479,
+        "linearizedBaseContracts": [
+          6479,
+          6490,
+          2459
+        ],
+        "name": "Validatable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 6453,
+              "nodeType": "Block",
+              "src": "284:77:55",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 6448,
+                          "name": "addressStorage",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2446,
+                          "src": "319:14:55",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_bytes32_$_t_address_$",
+                            "typeString": "mapping(bytes32 => address)"
+                          }
+                        },
+                        "id": 6450,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 6449,
+                          "name": "VALIDATOR_CONTRACT",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6489,
+                          "src": "334:18:55",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "319:34:55",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 6447,
+                      "name": "IBridgeValidators",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 731,
+                      "src": "301:17:55",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_IBridgeValidators_$731_$",
+                        "typeString": "type(contract IBridgeValidators)"
+                      }
+                    },
+                    "id": 6451,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "301:53:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IBridgeValidators_$731",
+                      "typeString": "contract IBridgeValidators"
+                    }
+                  },
+                  "functionReturnParameters": 6446,
+                  "id": 6452,
+                  "nodeType": "Return",
+                  "src": "294:60:55"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6454,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "validatorContract",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6443,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "241:2:55"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6446,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6445,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6454,
+                  "src": "265:17:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IBridgeValidators_$731",
+                    "typeString": "contract IBridgeValidators"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 6444,
+                    "name": "IBridgeValidators",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 731,
+                    "src": "265:17:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IBridgeValidators_$731",
+                      "typeString": "contract IBridgeValidators"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "264:19:55"
+            },
+            "scope": 6479,
+            "src": "215:146:55",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6466,
+              "nodeType": "Block",
+              "src": "392:113:55",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 6460,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 12639,
+                              "src": "442:3:55",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 6461,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "442:10:55",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "arguments": [],
+                            "expression": {
+                              "argumentTypes": [],
+                              "id": 6457,
+                              "name": "validatorContract",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6454,
+                              "src": "410:17:55",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_IBridgeValidators_$731_$",
+                                "typeString": "function () view returns (contract IBridgeValidators)"
+                              }
+                            },
+                            "id": 6458,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "410:19:55",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IBridgeValidators_$731",
+                              "typeString": "contract IBridgeValidators"
+                            }
+                          },
+                          "id": 6459,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "isValidator",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 720,
+                          "src": "410:31:55",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address) view external returns (bool)"
+                          }
+                        },
+                        "id": 6462,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "410:43:55",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 6456,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        12642,
+                        12643
+                      ],
+                      "referencedDeclaration": 12642,
+                      "src": "402:7:55",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 6463,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "402:52:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6464,
+                  "nodeType": "ExpressionStatement",
+                  "src": "402:52:55"
+                },
+                {
+                  "id": 6465,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "497:1:55"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6467,
+            "name": "onlyValidator",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 6455,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "389:2:55"
+            },
+            "src": "367:138:55",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6477,
+              "nodeType": "Block",
+              "src": "571:64:55",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 6472,
+                          "name": "validatorContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6454,
+                          "src": "588:17:55",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_IBridgeValidators_$731_$",
+                            "typeString": "function () view returns (contract IBridgeValidators)"
+                          }
+                        },
+                        "id": 6473,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "588:19:55",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IBridgeValidators_$731",
+                          "typeString": "contract IBridgeValidators"
+                        }
+                      },
+                      "id": 6474,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "requiredSignatures",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 725,
+                      "src": "588:38:55",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                        "typeString": "function () view external returns (uint256)"
+                      }
+                    },
+                    "id": 6475,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "588:40:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 6471,
+                  "id": 6476,
+                  "nodeType": "Return",
+                  "src": "581:47:55"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6478,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "requiredSignatures",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6468,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "538:2:55"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6471,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6470,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6478,
+                  "src": "562:7:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6469,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "562:7:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "561:9:55"
+            },
+            "scope": 6479,
+            "src": "511:124:55",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6480,
+        "src": "152:486:55"
+      }
+    ],
+    "src": "0:639:55"
+  },
+  "legacyAST": {
+    "absolutePath": "/contracts/contracts/upgradeable_contracts/Validatable.sol",
+    "exportedSymbols": {
+      "Validatable": [
+        6479
+      ]
+    },
+    "id": 6480,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6435,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:55"
+      },
+      {
+        "absolutePath": "/contracts/contracts/interfaces/IBridgeValidators.sol",
+        "file": "../interfaces/IBridgeValidators.sol",
+        "id": 6436,
+        "nodeType": "ImportDirective",
+        "scope": 6480,
+        "sourceUnit": 732,
+        "src": "25:45:55",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/contracts/contracts/upgradeability/EternalStorage.sol",
+        "file": "../upgradeability/EternalStorage.sol",
+        "id": 6437,
+        "nodeType": "ImportDirective",
+        "scope": 6480,
+        "sourceUnit": 2460,
+        "src": "71:46:55",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/contracts/contracts/upgradeable_contracts/ValidatorStorage.sol",
+        "file": "./ValidatorStorage.sol",
+        "id": 6438,
+        "nodeType": "ImportDirective",
+        "scope": 6480,
+        "sourceUnit": 6491,
+        "src": "118:32:55",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6439,
+              "name": "EternalStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2459,
+              "src": "176:14:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_EternalStorage_$2459",
+                "typeString": "contract EternalStorage"
+              }
+            },
+            "id": 6440,
+            "nodeType": "InheritanceSpecifier",
+            "src": "176:14:55"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6441,
+              "name": "ValidatorStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6490,
+              "src": "192:16:55",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ValidatorStorage_$6490",
+                "typeString": "contract ValidatorStorage"
+              }
+            },
+            "id": 6442,
+            "nodeType": "InheritanceSpecifier",
+            "src": "192:16:55"
+          }
+        ],
+        "contractDependencies": [
+          2459,
+          6490
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6479,
+        "linearizedBaseContracts": [
+          6479,
+          6490,
+          2459
+        ],
+        "name": "Validatable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 6453,
+              "nodeType": "Block",
+              "src": "284:77:55",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 6448,
+                          "name": "addressStorage",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2446,
+                          "src": "319:14:55",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_bytes32_$_t_address_$",
+                            "typeString": "mapping(bytes32 => address)"
+                          }
+                        },
+                        "id": 6450,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 6449,
+                          "name": "VALIDATOR_CONTRACT",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6489,
+                          "src": "334:18:55",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "319:34:55",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 6447,
+                      "name": "IBridgeValidators",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 731,
+                      "src": "301:17:55",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_IBridgeValidators_$731_$",
+                        "typeString": "type(contract IBridgeValidators)"
+                      }
+                    },
+                    "id": 6451,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "301:53:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IBridgeValidators_$731",
+                      "typeString": "contract IBridgeValidators"
+                    }
+                  },
+                  "functionReturnParameters": 6446,
+                  "id": 6452,
+                  "nodeType": "Return",
+                  "src": "294:60:55"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6454,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "validatorContract",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6443,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "241:2:55"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6446,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6445,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6454,
+                  "src": "265:17:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IBridgeValidators_$731",
+                    "typeString": "contract IBridgeValidators"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 6444,
+                    "name": "IBridgeValidators",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 731,
+                    "src": "265:17:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IBridgeValidators_$731",
+                      "typeString": "contract IBridgeValidators"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "264:19:55"
+            },
+            "scope": 6479,
+            "src": "215:146:55",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6466,
+              "nodeType": "Block",
+              "src": "392:113:55",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 6460,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 12639,
+                              "src": "442:3:55",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 6461,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "442:10:55",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "arguments": [],
+                            "expression": {
+                              "argumentTypes": [],
+                              "id": 6457,
+                              "name": "validatorContract",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6454,
+                              "src": "410:17:55",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_IBridgeValidators_$731_$",
+                                "typeString": "function () view returns (contract IBridgeValidators)"
+                              }
+                            },
+                            "id": 6458,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "410:19:55",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IBridgeValidators_$731",
+                              "typeString": "contract IBridgeValidators"
+                            }
+                          },
+                          "id": 6459,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "isValidator",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 720,
+                          "src": "410:31:55",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address) view external returns (bool)"
+                          }
+                        },
+                        "id": 6462,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "410:43:55",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 6456,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        12642,
+                        12643
+                      ],
+                      "referencedDeclaration": 12642,
+                      "src": "402:7:55",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 6463,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "402:52:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6464,
+                  "nodeType": "ExpressionStatement",
+                  "src": "402:52:55"
+                },
+                {
+                  "id": 6465,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "497:1:55"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6467,
+            "name": "onlyValidator",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 6455,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "389:2:55"
+            },
+            "src": "367:138:55",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6477,
+              "nodeType": "Block",
+              "src": "571:64:55",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 6472,
+                          "name": "validatorContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6454,
+                          "src": "588:17:55",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_IBridgeValidators_$731_$",
+                            "typeString": "function () view returns (contract IBridgeValidators)"
+                          }
+                        },
+                        "id": 6473,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "588:19:55",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IBridgeValidators_$731",
+                          "typeString": "contract IBridgeValidators"
+                        }
+                      },
+                      "id": 6474,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "requiredSignatures",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 725,
+                      "src": "588:38:55",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                        "typeString": "function () view external returns (uint256)"
+                      }
+                    },
+                    "id": 6475,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "588:40:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 6471,
+                  "id": 6476,
+                  "nodeType": "Return",
+                  "src": "581:47:55"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 6478,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "requiredSignatures",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6468,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "538:2:55"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6471,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6470,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6478,
+                  "src": "562:7:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6469,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "562:7:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "561:9:55"
+            },
+            "scope": 6479,
+            "src": "511:124:55",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6480,
+        "src": "152:486:55"
+      }
+    ],
+    "src": "0:639:55"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-09-30T13:18:39.291Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

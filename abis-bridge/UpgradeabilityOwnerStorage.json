@@ -1,0 +1,555 @@
+{
+  "contractName": "UpgradeabilityOwnerStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "upgradeabilityOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"upgradeabilityOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"upgradeabilityOwner()\":{\"details\":\"Tells the address of the owner\",\"return\":\"the address of the owner\"}},\"title\":\"UpgradeabilityOwnerStorage\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/contracts/contracts/upgradeability/UpgradeabilityOwnerStorage.sol\":\"UpgradeabilityOwnerStorage\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/contracts/contracts/upgradeability/UpgradeabilityOwnerStorage.sol\":{\"keccak256\":\"0x65549871b936adb62ce53d032054e08bba8510cdb1300594826b10c375af9ffb\",\"urls\":[\"bzzr://317ac2f120ec6f765e5a783094a1b8827f8a47edf6b8604b2050300f20f7c759\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060c68061001f6000396000f300608060405260043610603e5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416636fde820281146043575b600080fd5b348015604e57600080fd5b506055607e565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff16905600a165627a7a72305820dd177bd0ca98396ab6aff38dc0856329a9aac0b7a10bdb236b392a82fb010eeb0029",
+  "deployedBytecode": "0x608060405260043610603e5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416636fde820281146043575b600080fd5b348015604e57600080fd5b506055607e565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff16905600a165627a7a72305820dd177bd0ca98396ab6aff38dc0856329a9aac0b7a10bdb236b392a82fb010eeb0029",
+  "sourceMap": "132:515:29:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;132:515:29;;;;;;;",
+  "deployedSourceMap": "132:515:29:-;;;;;;;;;;;;;;;;;;;;;;;343:105;;8:9:-1;5:2;;;30:1;27;20:12;5:2;343:105:29;;;;;;;;;;;;;;;;;;;;;;;;395:7;421:20;;;343:105;:::o",
+  "source": "pragma solidity 0.4.24;\n\n/**\n * @title UpgradeabilityOwnerStorage\n * @dev This contract keeps track of the upgradeability owner\n */\ncontract UpgradeabilityOwnerStorage {\n    // Owner of the contract\n    address internal _upgradeabilityOwner;\n\n    /**\n    * @dev Tells the address of the owner\n    * @return the address of the owner\n    */\n    function upgradeabilityOwner() public view returns (address) {\n        return _upgradeabilityOwner;\n    }\n\n    /**\n    * @dev Sets the address of the owner\n    */\n    function setUpgradeabilityOwner(address newUpgradeabilityOwner) internal {\n        _upgradeabilityOwner = newUpgradeabilityOwner;\n    }\n}\n",
+  "sourcePath": "/contracts/contracts/upgradeability/UpgradeabilityOwnerStorage.sol",
+  "ast": {
+    "absolutePath": "/contracts/contracts/upgradeability/UpgradeabilityOwnerStorage.sol",
+    "exportedSymbols": {
+      "UpgradeabilityOwnerStorage": [
+        2624
+      ]
+    },
+    "id": 2625,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2603,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:29"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title UpgradeabilityOwnerStorage\n@dev This contract keeps track of the upgradeability owner",
+        "fullyImplemented": true,
+        "id": 2624,
+        "linearizedBaseContracts": [
+          2624
+        ],
+        "name": "UpgradeabilityOwnerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 2605,
+            "name": "_upgradeabilityOwner",
+            "nodeType": "VariableDeclaration",
+            "scope": 2624,
+            "src": "203:37:29",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2604,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "203:7:29",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2612,
+              "nodeType": "Block",
+              "src": "404:44:29",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2610,
+                    "name": "_upgradeabilityOwner",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2605,
+                    "src": "421:20:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 2609,
+                  "id": 2611,
+                  "nodeType": "Return",
+                  "src": "414:27:29"
+                }
+              ]
+            },
+            "documentation": "@dev Tells the address of the owner\n@return the address of the owner",
+            "id": 2613,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "upgradeabilityOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2606,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "371:2:29"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2609,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2608,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2613,
+                  "src": "395:7:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2607,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "395:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "394:9:29"
+            },
+            "scope": 2624,
+            "src": "343:105:29",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2622,
+              "nodeType": "Block",
+              "src": "583:62:29",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2620,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2618,
+                      "name": "_upgradeabilityOwner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2605,
+                      "src": "593:20:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2619,
+                      "name": "newUpgradeabilityOwner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2615,
+                      "src": "616:22:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "593:45:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 2621,
+                  "nodeType": "ExpressionStatement",
+                  "src": "593:45:29"
+                }
+              ]
+            },
+            "documentation": "@dev Sets the address of the owner",
+            "id": 2623,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setUpgradeabilityOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2616,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2615,
+                  "name": "newUpgradeabilityOwner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2623,
+                  "src": "542:30:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2614,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "542:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "541:32:29"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2617,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "583:0:29"
+            },
+            "scope": 2624,
+            "src": "510:135:29",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 2625,
+        "src": "132:515:29"
+      }
+    ],
+    "src": "0:648:29"
+  },
+  "legacyAST": {
+    "absolutePath": "/contracts/contracts/upgradeability/UpgradeabilityOwnerStorage.sol",
+    "exportedSymbols": {
+      "UpgradeabilityOwnerStorage": [
+        2624
+      ]
+    },
+    "id": 2625,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2603,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:29"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title UpgradeabilityOwnerStorage\n@dev This contract keeps track of the upgradeability owner",
+        "fullyImplemented": true,
+        "id": 2624,
+        "linearizedBaseContracts": [
+          2624
+        ],
+        "name": "UpgradeabilityOwnerStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 2605,
+            "name": "_upgradeabilityOwner",
+            "nodeType": "VariableDeclaration",
+            "scope": 2624,
+            "src": "203:37:29",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2604,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "203:7:29",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2612,
+              "nodeType": "Block",
+              "src": "404:44:29",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2610,
+                    "name": "_upgradeabilityOwner",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2605,
+                    "src": "421:20:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 2609,
+                  "id": 2611,
+                  "nodeType": "Return",
+                  "src": "414:27:29"
+                }
+              ]
+            },
+            "documentation": "@dev Tells the address of the owner\n@return the address of the owner",
+            "id": 2613,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "upgradeabilityOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2606,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "371:2:29"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2609,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2608,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2613,
+                  "src": "395:7:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2607,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "395:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "394:9:29"
+            },
+            "scope": 2624,
+            "src": "343:105:29",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2622,
+              "nodeType": "Block",
+              "src": "583:62:29",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2620,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2618,
+                      "name": "_upgradeabilityOwner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2605,
+                      "src": "593:20:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 2619,
+                      "name": "newUpgradeabilityOwner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2615,
+                      "src": "616:22:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "593:45:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 2621,
+                  "nodeType": "ExpressionStatement",
+                  "src": "593:45:29"
+                }
+              ]
+            },
+            "documentation": "@dev Sets the address of the owner",
+            "id": 2623,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setUpgradeabilityOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2616,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2615,
+                  "name": "newUpgradeabilityOwner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2623,
+                  "src": "542:30:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2614,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "542:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "541:32:29"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2617,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "583:0:29"
+            },
+            "scope": 2624,
+            "src": "510:135:29",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 2625,
+        "src": "132:515:29"
+      }
+    ],
+    "src": "0:648:29"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-09-30T13:18:39.251Z",
+  "devdoc": {
+    "methods": {
+      "upgradeabilityOwner()": {
+        "details": "Tells the address of the owner",
+        "return": "the address of the owner"
+      }
+    },
+    "title": "UpgradeabilityOwnerStorage"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

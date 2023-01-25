@@ -1,0 +1,70 @@
+Running migration: 1_initial_migration.js
+  Deploying Migrations...
+  ... 0x466311570279b22d061e84956f9e09ceb245ce768faca46510e6bd4a7f59390c
+  Migrations: 0x9eae5e53bfcfb3803b7989b151d9455bb6fa96b7
+Saving successful migration to network...
+  ... 0xc3a4e4b552871071a6a7ca934bf679d7103476e5082878bce092119ae9b289d0
+Saving artifacts...
+Running migration: 2_deploy_contract.js
+  Running step...
+  ... 0x6498d0bb6bf692f8dae8b6234d511f2bac761238fddfa8cdc984db512ab60c2c
+  ... 0x3700f9d917ac876917e1f57483f633015fb8c6eac1a320c39c31004328785c01
+  ... 0xe92e0d9fa80cba4c1b4b8d2e2ed6e91ac105f4c114dd4caf55ca3a828e8cc26b
+  ... 0x69e0661f4b84196946dd5b8c18de8874e2f340950107089d0e5e441201357ba4
+  ... 0x031f21af003cf4acdf3b284c4c7a100785a73f23b97e81f4b87f8419af026e30
+  ... 0x819456ef80b34e0caa6404377ec16eca288d3129e74cfdf14f327a838c088901
+  ... 0xc368e5f8108c9642ef15ad38df0a9d9536c12c57f83b4bac330847e98c4e996a
+  ... 0x0ba79c7e69ca9fce7ad0f20fca89a23689836ba3020246f01ed3a1b0bcebe4b9
+  ... 0xf0d977a6b5a202584a98067922a29a22477ceb32d6e789b8dfd85bf7289a01bb
+  ... 0x1debf917c8ba7ab53f34e3a320117ce258fc9fa6ac35b35448dfd6e432ac8103
+  ... 0x60059c562fba293f3d088c4e27cf9d610827eff8fcb6ef525737b0fd87ba5249
+  ... 0x4596b743511676b4312c6653a6d51ec8b669f094528f0d2e0336551320405451
+  ... 0x127b21ce5c0d0f17c1a3bf1b454153424a6899e7e59c7e080aee032db2544ccb
+  ... 0xff1d9521f43f3f8f8504f69ffcc3b875071c7c7148285da1970b5e90140a7dfc
+  ... 0x0d3e99ce03307f5ea887c605bc5a547715acbb255dc589dda804d5365928cf3e
+  ... 0x442648212eca71e38a3d8024ec7a38bfb30f1f9c35b2c145ab079ad2a5e29b63
+  ... 0x0fd3db6632c714c4f6a7bf31bcaeda7518ecdf42b6db9eae81c044072c70e50e
+  ... 0x722a4d8e61beb8f08ed4aae0058b0c9c6c0ccbb1cbbafb1d78eec541d3d7a22c
+  ... 0xfe6358f7b62e3f279be7495c257e24cc7bb0a7a08578078226475ef3f797dc52
+  ... 0x077d9e39cdd29943f6adea0c7011d0664c5bd733f4d1ffc7b09df0644eb604e6
+  ... 0xe3129da51e5e4e3e15dde3a61f1bdc76d7ce607c6b032a69a2f69893a3540168
+  ... 0x6eb36f34f01927d2cd6008d539b70f60c8d0b0abcd34813a4d3aeaedcdea362c
+  ... 0x2b2d657e4fcf7e3ee70d264b27870ca88f4714d1d40d46bda68a08fb23170064
+  ... 0x2d1b8266107a6fd69cb598faa5f73b5d39c2eb0c5baa504ad075d9011635eb8a
+  ... 0xae14b12af4fa71289ff3a33a67573069f7a142972d2dfbffc5413af3b7039c6d
+  ... 0x6cbb6ef534bab25bb005b22b2c627eb58e5ba454377330ea6e1f17e606512615
+  ... 0x974893c1e9c8c17cd7284a7624d4b8897526c8bf89d24e66b298d4eabde9fa2c
+  ... 0xc45c031894666091eabc6d803b3520ba06ab966d4e14b8fc82a9c41b39fd26d0
+  ... 0xc8b7b3beca0dbd055af4faa9907b064060d0bafe7da92dbfa37cc434ded10d54
+  ... 0x5c7b9c681f650e913f86fe46c67a13c1ef0bec9b43df9cacba43b741c928759a
+  ... 0xa94dbf9e0af55cdf63b1414a98f6c6a5df3b9c609f5e856b1acd15db46f0c3ef
+  ... 0x85640bb0a295b184939aae514665d089a23e2e4f508a6b3bb2647604da94d8e8
+  ... 0xe871e8db0b59b4be441b162d24f1d62fbb59aa9435a16bc2879be0f9c6270934
+
+Done. ADDRESSES: 
+  VotingToChangeKeys.address (implementation) ........ 0x41954e23582ffc46b6b118e7c8141c5107fd4a0b
+  VotingToChangeKeys.address (storage) ............... 0xa48f24827acb1322c8a6802595a5bc53bc0e1ac4
+  VotingToChangeMinThreshold.address (implementation). 0xbebc57a6dc23a399a8218f4db448669fed9deea2
+  VotingToChangeMinThreshold.address (storage) ....... 0xb650ad4cdc309e6c78d20f6033e4ebab27d9914a
+  VotingToChangeProxyAddress.address (implementation). 0x2f9ff19bed80363045abe016cfae33f6ed1002a2
+  VotingToChangeProxyAddress.address (storage) ....... 0xd019f7564fc82b4db160cb4dc01bfa5552db8e40
+  VotingToManageEmissionFunds.address (implementation) 0x875a8503fab4fc79257b7dbedb92f24850f0a534
+  VotingToManageEmissionFunds.address (storage) ...... 0x2e42800d0f2605737235fd53f657ce3fe06bd57e
+  BallotsStorage.address (implementation) ............ 0xfde40501571109ae148fa2ed9573ebea883b6d45
+  BallotsStorage.address (storage) ................... 0x86ffd9aca281201a11b5911b5afefac7f3b457fd
+  KeysManager.address (implementation) ............... 0x85ed4669f292e280e09e0f1a76cc741b6df2c6a1
+  KeysManager.address (storage) ...................... 0x02f88f8fecf5bbb2f3e878bbea775aa534488a74
+  ValidatorMetadata.address (implementation) ......... 0xfe9ecdc22dce9d56a4bcf6dcf606e9e6dacdee11
+  ValidatorMetadata.address (storage) ................ 0x3b0d3e7276a5d48a578f920828a62ab784af0eaf
+  ProxyStorage.address (implementation) .............. 0x74d8ca9b7ef5f864845ff2259751f9489f2e211f
+  ProxyStorage.address (storage) ..................... 0xbb0a3d5c3497b8cc7d1f13fbd1a2972e4d6561db
+  PoaNetworkConsensus.address ........................ 0xf2f8ebd6df066f93dc012cc94fbfa4592727a910
+  EmissionFunds.address .............................. 0x82b4e0d10b7ecb6df21c9455399eb263fc505f82
+  RewardByBlock.address (implementation) ............. 0xddcb44cFc50B32Ef25B6E92C23C92Bedd604C3aC
+  RewardByBlock.address (storage) .................... 0xc9970afa357d919248d9042c020f7448baa65e1e
+  ACL.address ........................................ 0x5b422a904174ab816b381e94ba740a20b2ca8132
+        
+Saving successful migration to network...
+  ... 0xbac10712a56e959a46004effc06fa22af27ad7446d8dc8fe8d92d1a6a7b1d58e
+Saving artifacts...
+

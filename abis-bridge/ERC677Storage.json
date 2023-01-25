@@ -1,0 +1,366 @@
+{
+  "contractName": "ERC677Storage",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/contracts/contracts/upgradeable_contracts/ERC677Storage.sol\":\"ERC677Storage\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/contracts/contracts/upgradeable_contracts/ERC677Storage.sol\":{\"keccak256\":\"0x6e3dd92defed4d7595efe90039ed5ba9c47ad8ce4bdd9ed4ef245446d1214312\",\"urls\":[\"bzzr://05051f53acd03c3be2cb1391fca71836d1266757096c2ae173c2811e9304d158\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820a31a1c981a7c120a99325c2758a53e442d0203f6d98f8ad54b522373bfa143190029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820a31a1c981a7c120a99325c2758a53e442d0203f6d98f8ad54b522373bfa143190029",
+  "sourceMap": "25:115:45:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:115:45;;;;;;;",
+  "deployedSourceMap": "25:115:45:-;;;;;",
+  "source": "pragma solidity 0.4.24;\n\ncontract ERC677Storage {\n    bytes32 internal constant ERC677_TOKEN = keccak256(abi.encodePacked(\"erc677token\"));\n}\n",
+  "sourcePath": "/contracts/contracts/upgradeable_contracts/ERC677Storage.sol",
+  "ast": {
+    "absolutePath": "/contracts/contracts/upgradeable_contracts/ERC677Storage.sol",
+    "exportedSymbols": {
+      "ERC677Storage": [
+        5319
+      ]
+    },
+    "id": 5320,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5310,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:45"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5319,
+        "linearizedBaseContracts": [
+          5319
+        ],
+        "name": "ERC677Storage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 5318,
+            "name": "ERC677_TOKEN",
+            "nodeType": "VariableDeclaration",
+            "scope": 5319,
+            "src": "54:83:45",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 5311,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "54:7:45",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "arguments": [
+                    {
+                      "argumentTypes": null,
+                      "hexValue": "657263363737746f6b656e",
+                      "id": 5315,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "122:13:45",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_a8b0ade3e2b734f043ce298aca4cc8d19d74270223f34531d0988b7d00cba21d",
+                        "typeString": "literal_string \"erc677token\""
+                      },
+                      "value": "erc677token"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_a8b0ade3e2b734f043ce298aca4cc8d19d74270223f34531d0988b7d00cba21d",
+                        "typeString": "literal_string \"erc677token\""
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 5313,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 12626,
+                      "src": "105:3:45",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 5314,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encodePacked",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "105:16:45",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 5316,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "105:31:45",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 5312,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 12633,
+                "src": "95:9:45",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 5317,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "95:42:45",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 5320,
+        "src": "25:115:45"
+      }
+    ],
+    "src": "0:141:45"
+  },
+  "legacyAST": {
+    "absolutePath": "/contracts/contracts/upgradeable_contracts/ERC677Storage.sol",
+    "exportedSymbols": {
+      "ERC677Storage": [
+        5319
+      ]
+    },
+    "id": 5320,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5310,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:45"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5319,
+        "linearizedBaseContracts": [
+          5319
+        ],
+        "name": "ERC677Storage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 5318,
+            "name": "ERC677_TOKEN",
+            "nodeType": "VariableDeclaration",
+            "scope": 5319,
+            "src": "54:83:45",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 5311,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "54:7:45",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "arguments": [
+                    {
+                      "argumentTypes": null,
+                      "hexValue": "657263363737746f6b656e",
+                      "id": 5315,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "122:13:45",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_a8b0ade3e2b734f043ce298aca4cc8d19d74270223f34531d0988b7d00cba21d",
+                        "typeString": "literal_string \"erc677token\""
+                      },
+                      "value": "erc677token"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_a8b0ade3e2b734f043ce298aca4cc8d19d74270223f34531d0988b7d00cba21d",
+                        "typeString": "literal_string \"erc677token\""
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 5313,
+                      "name": "abi",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 12626,
+                      "src": "105:3:45",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_magic_abi",
+                        "typeString": "abi"
+                      }
+                    },
+                    "id": 5314,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "encodePacked",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "105:16:45",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                      "typeString": "function () pure returns (bytes memory)"
+                    }
+                  },
+                  "id": 5316,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "105:31:45",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes memory"
+                  }
+                ],
+                "id": 5312,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 12633,
+                "src": "95:9:45",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
+                  "typeString": "function () pure returns (bytes32)"
+                }
+              },
+              "id": 5317,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "95:42:45",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 5320,
+        "src": "25:115:45"
+      }
+    ],
+    "src": "0:141:45"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-09-30T13:18:39.279Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

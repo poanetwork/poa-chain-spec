@@ -1,0 +1,179 @@
+{
+  "contractName": "Staking",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/contracts/contracts/mocks/Staking.sol\":\"Staking\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/contracts/contracts/mocks/Staking.sol\":{\"keccak256\":\"0xf15543b291994ef5b217d6719daec12ce304cf102d6c5965b3ae7c9809655d63\",\"urls\":[\"bzzr://3dd51acdb181b6afe225da649f059bab3da29c44b520bb059cedac36b77b644c\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820de69269b1befb2387430c9a5a1aca5312c8f55a1c89b399af652849ebe989c9b0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820de69269b1befb2387430c9a5a1aca5312c8f55a1c89b399af652849ebe989c9b0029",
+  "sourceMap": "25:110:23:-;;;48:85;8:9:-1;5:2;;;30:1;27;20:12;5:2;48:85:23;25:110;;;;;;",
+  "deployedSourceMap": "25:110:23:-;;;;;",
+  "source": "pragma solidity 0.4.24;\n\ncontract Staking {\n    constructor() public {\n        // solhint-disable-previous-line no-empty-blocks\n    }\n}\n",
+  "sourcePath": "/contracts/contracts/mocks/Staking.sol",
+  "ast": {
+    "absolutePath": "/contracts/contracts/mocks/Staking.sol",
+    "exportedSymbols": {
+      "Staking": [
+        2367
+      ]
+    },
+    "id": 2368,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2362,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:23"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2367,
+        "linearizedBaseContracts": [
+          2367
+        ],
+        "name": "Staking",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2365,
+              "nodeType": "Block",
+              "src": "69:64:23",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2366,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2363,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "59:2:23"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2364,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "69:0:23"
+            },
+            "scope": 2367,
+            "src": "48:85:23",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2368,
+        "src": "25:110:23"
+      }
+    ],
+    "src": "0:136:23"
+  },
+  "legacyAST": {
+    "absolutePath": "/contracts/contracts/mocks/Staking.sol",
+    "exportedSymbols": {
+      "Staking": [
+        2367
+      ]
+    },
+    "id": 2368,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2362,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:23"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2367,
+        "linearizedBaseContracts": [
+          2367
+        ],
+        "name": "Staking",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2365,
+              "nodeType": "Block",
+              "src": "69:64:23",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2366,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2363,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "59:2:23"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2364,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "69:0:23"
+            },
+            "scope": 2367,
+            "src": "48:85:23",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2368,
+        "src": "25:110:23"
+      }
+    ],
+    "src": "0:136:23"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-09-30T13:18:39.248Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

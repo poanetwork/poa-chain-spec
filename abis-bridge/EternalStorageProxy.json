@@ -1,0 +1,417 @@
+{
+  "contractName": "EternalStorageProxy",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "version",
+          "type": "uint256"
+        },
+        {
+          "name": "implementation",
+          "type": "address"
+        }
+      ],
+      "name": "upgradeTo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "upgradeabilityOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "version",
+          "type": "uint256"
+        },
+        {
+          "name": "implementation",
+          "type": "address"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "upgradeToAndCall",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferProxyOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "ProxyOwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "version",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "implementation",
+          "type": "address"
+        }
+      ],
+      "name": "Upgraded",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"version\",\"type\":\"uint256\"},{\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"upgradeTo\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"version\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"upgradeabilityOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"version\",\"type\":\"uint256\"},{\"name\":\"implementation\",\"type\":\"address\"},{\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"upgradeToAndCall\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferProxyOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"ProxyOwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"version\",\"type\":\"uint256\"},{\"indexed\":true,\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"Upgraded\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"implementation()\":{\"details\":\"Tells the address of the current implementation\",\"return\":\"address of the current implementation\"},\"transferProxyOwnership(address)\":{\"details\":\"Allows the current owner to transfer control of the contract to a newOwner.\",\"params\":{\"newOwner\":\"The address to transfer ownership to.\"}},\"upgradeTo(uint256,address)\":{\"details\":\"Allows the upgradeability owner to upgrade the current version of the proxy.\",\"params\":{\"implementation\":\"representing the address of the new implementation to be set.\",\"version\":\"representing the version name of the new implementation to be set.\"}},\"upgradeToAndCall(uint256,address,bytes)\":{\"details\":\"Allows the upgradeability owner to upgrade the current version of the proxy and call the new implementation to initialize whatever is needed through a low level call.\",\"params\":{\"data\":\"represents the msg.data to bet sent in the low level call. This parameter may include the function signature of the implementation to be called with the needed payload\",\"implementation\":\"representing the address of the new implementation to be set.\",\"version\":\"representing the version name of the new implementation to be set.\"}},\"upgradeabilityOwner()\":{\"details\":\"Tells the address of the owner\",\"return\":\"the address of the owner\"},\"version()\":{\"details\":\"Tells the version name of the current implementation\",\"return\":\"uint256 representing the name of the current version\"}},\"title\":\"EternalStorageProxy\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/contracts/contracts/upgradeability/EternalStorageProxy.sol\":\"EternalStorageProxy\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/contracts/contracts/upgradeability/EternalStorage.sol\":{\"keccak256\":\"0x8f2df79a1cda812d4be25da8f2b138f9b7492e76da1dfba21d87012e649cc51c\",\"urls\":[\"bzzr://0846d08e1b7a84e541ae31c91d2c0b34d88cf3abbd18891ec6eedeea7e958af2\"]},\"/contracts/contracts/upgradeability/EternalStorageProxy.sol\":{\"keccak256\":\"0x5afd8609cb5b99df03237f6289dd14cd66656ab33b1fddf05f0c7134763d099c\",\"urls\":[\"bzzr://062784d6e7061892d44a5e02ccd2120d83613900fc0f0bdb6ba684deb2329b6b\"]},\"/contracts/contracts/upgradeability/OwnedUpgradeabilityProxy.sol\":{\"keccak256\":\"0xc7aae17f8a8cbdb09244eab37a90339ce9b0d59c39206d5c1408804bd247a9ec\",\"urls\":[\"bzzr://7d3399f47c6586f53cf17c2ef5bce8c94ccccb1a763b24db3cb5410dfff6422a\"]},\"/contracts/contracts/upgradeability/Proxy.sol\":{\"keccak256\":\"0x988fcd3b873c98ca9bab506f729188d223622bc1c2955bfd052055cd5a87826f\",\"urls\":[\"bzzr://a834a880c6eae7a950227d28ea2c495004c71e24ac1e06fb89f1e10d23a1dbf8\"]},\"/contracts/contracts/upgradeability/UpgradeabilityOwnerStorage.sol\":{\"keccak256\":\"0x65549871b936adb62ce53d032054e08bba8510cdb1300594826b10c375af9ffb\",\"urls\":[\"bzzr://317ac2f120ec6f765e5a783094a1b8827f8a47edf6b8604b2050300f20f7c759\"]},\"/contracts/contracts/upgradeability/UpgradeabilityProxy.sol\":{\"keccak256\":\"0x3c25ee559b49a4950bb50a68edb3be934aae7538a805c7022f222604d54d9df7\",\"urls\":[\"bzzr://ad03c47d8f5a06446cf17fcdc0bdddef8bcc98b6b84ad25b287a42f3c79c0436\"]},\"/contracts/contracts/upgradeability/UpgradeabilityStorage.sol\":{\"keccak256\":\"0xffdb68109e05bd97ad22afd48bd618a32a78164af970f3439467921c8a66908f\",\"urls\":[\"bzzr://ad4a283f557e95ff7574310e0e66ed38417cd3e8be98420191d0eb23aa9a8db1\"]},\"openzeppelin-solidity/contracts/AddressUtils.sol\":{\"keccak256\":\"0x5ed3dc711dbb34917afff3c753adf3b0580514d1339cfedaa5a73645d8ac9b56\",\"urls\":[\"bzzr://d597eeb695a3d64766453239e973ddd65994c258ab8d5cab0d90103033ce85fc\"]}},\"version\":1}",
+  "bytecode": "0x60806040526100163364010000000061001b810204565b61003d565b60068054600160a060020a031916600160a060020a0392909216919091179055565b6103e08061004c6000396000f3006080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416633ad06d1681146100c257806354fd4d50146100e85780635c60da1b1461010f5780636fde820214610140578063a9c45fcb14610155578063f1739cae14610179575b600061008161019a565b9050600160a060020a038116151561009857600080fd5b60405136600082376000803683855af43d82016040523d6000833e8080156100be573d83f35b3d83fd5b3480156100ce57600080fd5b506100e6600435600160a060020a03602435166101a9565b005b3480156100f457600080fd5b506100fd6101d3565b60408051918252519081900360200190f35b34801561011b57600080fd5b5061012461019a565b60408051600160a060020a039092168252519081900360200190f35b34801561014c57600080fd5b506101246101d9565b6100e6600480359060248035600160a060020a0316916044359182019101356101e8565b34801561018557600080fd5b506100e6600160a060020a0360043516610250565b600854600160a060020a031690565b6101b16101d9565b600160a060020a031633146101c557600080fd5b6101cf82826102d8565b5050565b60075490565b600654600160a060020a031690565b6101f06101d9565b600160a060020a0316331461020457600080fd5b61020e84846101a9565b30600160a060020a03163483836040518083838082843782019150509250505060006040518083038185875af192505050151561024a57600080fd5b50505050565b6102586101d9565b600160a060020a0316331461026c57600080fd5b600160a060020a038116151561028157600080fd5b7f5a3e66efaa1e445ebd894728a69d6959842ea1e97bd79b892797106e270efcd96102aa6101d9565b60408051600160a060020a03928316815291841660208301528051918290030190a16102d58161037d565b50565b600854600160a060020a03828116911614156102f357600080fd5b6102fc816103ac565b151561030757600080fd5b600754821161031557600080fd5b600782905560088054600160a060020a03831673ffffffffffffffffffffffffffffffffffffffff1990911681179091556040805184815290517f4289d6195cf3c2d2174adf98d0e19d4d2d08887995b99cb7b100e7ffe795820e9181900360200190a25050565b6006805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b6000903b11905600a165627a7a72305820b73e0d5363f6ad330be2bcc9765581b518805f148f2ad11003f91d67350a94270029",
+  "deployedBytecode": "0x6080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416633ad06d1681146100c257806354fd4d50146100e85780635c60da1b1461010f5780636fde820214610140578063a9c45fcb14610155578063f1739cae14610179575b600061008161019a565b9050600160a060020a038116151561009857600080fd5b60405136600082376000803683855af43d82016040523d6000833e8080156100be573d83f35b3d83fd5b3480156100ce57600080fd5b506100e6600435600160a060020a03602435166101a9565b005b3480156100f457600080fd5b506100fd6101d3565b60408051918252519081900360200190f35b34801561011b57600080fd5b5061012461019a565b60408051600160a060020a039092168252519081900360200190f35b34801561014c57600080fd5b506101246101d9565b6100e6600480359060248035600160a060020a0316916044359182019101356101e8565b34801561018557600080fd5b506100e6600160a060020a0360043516610250565b600854600160a060020a031690565b6101b16101d9565b600160a060020a031633146101c557600080fd5b6101cf82826102d8565b5050565b60075490565b600654600160a060020a031690565b6101f06101d9565b600160a060020a0316331461020457600080fd5b61020e84846101a9565b30600160a060020a03163483836040518083838082843782019150509250505060006040518083038185875af192505050151561024a57600080fd5b50505050565b6102586101d9565b600160a060020a0316331461026c57600080fd5b600160a060020a038116151561028157600080fd5b7f5a3e66efaa1e445ebd894728a69d6959842ea1e97bd79b892797106e270efcd96102aa6101d9565b60408051600160a060020a03928316815291841660208301528051918290030190a16102d58161037d565b50565b600854600160a060020a03828116911614156102f357600080fd5b6102fc816103ac565b151561030757600080fd5b600754821161031557600080fd5b600782905560088054600160a060020a03831673ffffffffffffffffffffffffffffffffffffffff1990911681179091556040805184815290517f4289d6195cf3c2d2174adf98d0e19d4d2d08887995b99cb7b100e7ffe795820e9181900360200190a25050565b6006805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b6000903b11905600a165627a7a72305820b73e0d5363f6ad330be2bcc9765581b518805f148f2ad11003f91d67350a94270029",
+  "sourceMap": "448:75:26:-;;;767:34:27;790:10;767:22;;;;:34;:::i;:::-;448:75:26;;510:135:29;593:20;:45;;-1:-1:-1;;;;;;593:45:29;-1:-1:-1;;;;;593:45:29;;;;;;;;;;510:135::o;448:75:26:-;;;;;;;",
+  "deployedSourceMap": "448:75:26:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;695:13:28;711:16;:14;:16::i;:::-;695:32;-1:-1:-1;;;;;;745:19:28;;;;737:28;;;;;;1195:4;1189:11;1965:12;1962:1;1957:3;1944:34;2878:1;2875;2861:12;2856:3;2849:5;2844:3;2831:49;3554:14;3549:3;3545:24;3539:4;3532:38;4057:14;4054:1;4049:3;4034:38;4332:6;4355:74;;;;4488:14;4483:3;4476:27;4355:74;4396:14;4391:3;4384:27;1735:143:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1735:143:27;;;-1:-1:-1;;;;;1735:143:27;;;;;;;513:83:31;;8:9:-1;5:2;;;30:1;27;20:12;5:2;513:83:31;;;;;;;;;;;;;;;;;;;;728:95;;8:9:-1;5:2;;;30:1;27;20:12;5:2;728:95:31;;;;;;;;-1:-1:-1;;;;;728:95:31;;;;;;;;;;;;;;343:105:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;343:105:29;;;;2453:313:27;;;;;;;;;-1:-1:-1;;;;;2453:313:27;;;;;;;;;;;;1202:246;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1202:246:27;-1:-1:-1;;;;;1202:246:27;;;;;728:95:31;801:15;;-1:-1:-1;;;;;801:15:31;728:95;:::o;1735:143:27:-;961:21;:19;:21::i;:::-;-1:-1:-1;;;;;947:35:27;:10;:35;939:44;;;;;;1836:35;1847:7;1856:14;1836:10;:35::i;:::-;1735:143;;:::o;513:83:31:-;581:8;;513:83;:::o;343:105:29:-;421:20;;-1:-1:-1;;;;;421:20:29;343:105;:::o;2453:313:27:-;961:21;:19;:21::i;:::-;-1:-1:-1;;;;;947:35:27;:10;:35;939:44;;;;;;2611:34;2621:7;2630:14;2611:9;:34::i;:::-;2725:4;-1:-1:-1;;;;;2717:18:27;2742:9;2753:4;;2717:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2709:50;;;;;;;;2453:313;;;;:::o;1202:246::-;961:21;:19;:21::i;:::-;-1:-1:-1;;;;;947:35:27;:10;:35;939:44;;;;;;-1:-1:-1;;;;;1303:22:27;;;;1295:31;;;;;;1341:58;1367:21;:19;:21::i;:::-;1341:58;;;-1:-1:-1;;;;;1341:58:27;;;;;;;;;;;;;;;;;;;;;1409:32;1432:8;1409:22;:32::i;:::-;1202:246;:::o;937:342:30:-;1025:15;;-1:-1:-1;;;;;1025:33:30;;;:15;;:33;;1017:42;;;;;;1077:39;1101:14;1077:23;:39::i;:::-;1069:48;;;;;;;;1145:8;;1135:18;;1127:27;;;;;;1164:8;:18;;;1192:15;:32;;-1:-1:-1;;;;;1192:32:30;;-1:-1:-1;;1192:32:30;;;;;;;;1239:33;;;;;;;;;;;;;;;;;937:342;;:::o;510:135:29:-;593:20;:45;;-1:-1:-1;;593:45:29;-1:-1:-1;;;;;593:45:29;;;;;;;;;;510:135::o;438:578:84:-;496:4;971:18;;1003:8;;438:578::o",
+  "source": "pragma solidity 0.4.24;\n\nimport \"./EternalStorage.sol\";\nimport \"./OwnedUpgradeabilityProxy.sol\";\n\n/**\n * @title EternalStorageProxy\n * @dev This proxy holds the storage of the token contract and delegates every call to the current implementation set.\n * Besides, it allows to upgrade the token's behaviour towards further implementations, and provides basic\n * authorization control functionalities\n */\n// solhint-disable-next-line no-empty-blocks\ncontract EternalStorageProxy is EternalStorage, OwnedUpgradeabilityProxy {}\n",
+  "sourcePath": "/contracts/contracts/upgradeability/EternalStorageProxy.sol",
+  "ast": {
+    "absolutePath": "/contracts/contracts/upgradeability/EternalStorageProxy.sol",
+    "exportedSymbols": {
+      "EternalStorageProxy": [
+        2468
+      ]
+    },
+    "id": 2469,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2461,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:26"
+      },
+      {
+        "absolutePath": "/contracts/contracts/upgradeability/EternalStorage.sol",
+        "file": "./EternalStorage.sol",
+        "id": 2462,
+        "nodeType": "ImportDirective",
+        "scope": 2469,
+        "sourceUnit": 2460,
+        "src": "25:30:26",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/contracts/contracts/upgradeability/OwnedUpgradeabilityProxy.sol",
+        "file": "./OwnedUpgradeabilityProxy.sol",
+        "id": 2463,
+        "nodeType": "ImportDirective",
+        "scope": 2469,
+        "sourceUnit": 2576,
+        "src": "56:40:26",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2464,
+              "name": "EternalStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2459,
+              "src": "480:14:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_EternalStorage_$2459",
+                "typeString": "contract EternalStorage"
+              }
+            },
+            "id": 2465,
+            "nodeType": "InheritanceSpecifier",
+            "src": "480:14:26"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2466,
+              "name": "OwnedUpgradeabilityProxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2575,
+              "src": "496:24:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_OwnedUpgradeabilityProxy_$2575",
+                "typeString": "contract OwnedUpgradeabilityProxy"
+              }
+            },
+            "id": 2467,
+            "nodeType": "InheritanceSpecifier",
+            "src": "496:24:26"
+          }
+        ],
+        "contractDependencies": [
+          2459,
+          2575,
+          2601,
+          2624,
+          2680,
+          2703
+        ],
+        "contractKind": "contract",
+        "documentation": "@title EternalStorageProxy\n@dev This proxy holds the storage of the token contract and delegates every call to the current implementation set.\nBesides, it allows to upgrade the token's behaviour towards further implementations, and provides basic\nauthorization control functionalities",
+        "fullyImplemented": true,
+        "id": 2468,
+        "linearizedBaseContracts": [
+          2468,
+          2575,
+          2680,
+          2703,
+          2601,
+          2624,
+          2459
+        ],
+        "name": "EternalStorageProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 2469,
+        "src": "448:75:26"
+      }
+    ],
+    "src": "0:524:26"
+  },
+  "legacyAST": {
+    "absolutePath": "/contracts/contracts/upgradeability/EternalStorageProxy.sol",
+    "exportedSymbols": {
+      "EternalStorageProxy": [
+        2468
+      ]
+    },
+    "id": 2469,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2461,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:26"
+      },
+      {
+        "absolutePath": "/contracts/contracts/upgradeability/EternalStorage.sol",
+        "file": "./EternalStorage.sol",
+        "id": 2462,
+        "nodeType": "ImportDirective",
+        "scope": 2469,
+        "sourceUnit": 2460,
+        "src": "25:30:26",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/contracts/contracts/upgradeability/OwnedUpgradeabilityProxy.sol",
+        "file": "./OwnedUpgradeabilityProxy.sol",
+        "id": 2463,
+        "nodeType": "ImportDirective",
+        "scope": 2469,
+        "sourceUnit": 2576,
+        "src": "56:40:26",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2464,
+              "name": "EternalStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2459,
+              "src": "480:14:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_EternalStorage_$2459",
+                "typeString": "contract EternalStorage"
+              }
+            },
+            "id": 2465,
+            "nodeType": "InheritanceSpecifier",
+            "src": "480:14:26"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2466,
+              "name": "OwnedUpgradeabilityProxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2575,
+              "src": "496:24:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_OwnedUpgradeabilityProxy_$2575",
+                "typeString": "contract OwnedUpgradeabilityProxy"
+              }
+            },
+            "id": 2467,
+            "nodeType": "InheritanceSpecifier",
+            "src": "496:24:26"
+          }
+        ],
+        "contractDependencies": [
+          2459,
+          2575,
+          2601,
+          2624,
+          2680,
+          2703
+        ],
+        "contractKind": "contract",
+        "documentation": "@title EternalStorageProxy\n@dev This proxy holds the storage of the token contract and delegates every call to the current implementation set.\nBesides, it allows to upgrade the token's behaviour towards further implementations, and provides basic\nauthorization control functionalities",
+        "fullyImplemented": true,
+        "id": 2468,
+        "linearizedBaseContracts": [
+          2468,
+          2575,
+          2680,
+          2703,
+          2601,
+          2624,
+          2459
+        ],
+        "name": "EternalStorageProxy",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 2469,
+        "src": "448:75:26"
+      }
+    ],
+    "src": "0:524:26"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-09-30T13:18:39.249Z",
+  "devdoc": {
+    "methods": {
+      "implementation()": {
+        "details": "Tells the address of the current implementation",
+        "return": "address of the current implementation"
+      },
+      "transferProxyOwnership(address)": {
+        "details": "Allows the current owner to transfer control of the contract to a newOwner.",
+        "params": {
+          "newOwner": "The address to transfer ownership to."
+        }
+      },
+      "upgradeTo(uint256,address)": {
+        "details": "Allows the upgradeability owner to upgrade the current version of the proxy.",
+        "params": {
+          "implementation": "representing the address of the new implementation to be set.",
+          "version": "representing the version name of the new implementation to be set."
+        }
+      },
+      "upgradeToAndCall(uint256,address,bytes)": {
+        "details": "Allows the upgradeability owner to upgrade the current version of the proxy and call the new implementation to initialize whatever is needed through a low level call.",
+        "params": {
+          "data": "represents the msg.data to bet sent in the low level call. This parameter may include the function signature of the implementation to be called with the needed payload",
+          "implementation": "representing the address of the new implementation to be set.",
+          "version": "representing the version name of the new implementation to be set."
+        }
+      },
+      "upgradeabilityOwner()": {
+        "details": "Tells the address of the owner",
+        "return": "the address of the owner"
+      },
+      "version()": {
+        "details": "Tells the version name of the current implementation",
+        "return": "uint256 representing the name of the current version"
+      }
+    },
+    "title": "EternalStorageProxy"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

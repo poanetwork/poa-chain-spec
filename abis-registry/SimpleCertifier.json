@@ -1,0 +1,2767 @@
+{
+  "contractName": "SimpleCertifier",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_new",
+          "type": "address"
+        }
+      ],
+      "name": "setOwner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "delegate",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "who",
+          "type": "address"
+        }
+      ],
+      "name": "Confirmed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "who",
+          "type": "address"
+        }
+      ],
+      "name": "Revoked",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "old",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "current",
+          "type": "address"
+        }
+      ],
+      "name": "NewOwner",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_who",
+          "type": "address"
+        }
+      ],
+      "name": "certify",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_who",
+          "type": "address"
+        }
+      ],
+      "name": "revoke",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_new",
+          "type": "address"
+        }
+      ],
+      "name": "setDelegate",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_who",
+          "type": "address"
+        }
+      ],
+      "name": "certified",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555033600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555034801561009157600080fd5b5061077b806100a16000396000f300608060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806313af40351461008857806314253887146100cb57806374a8f1031461010e5780638da5cb5b14610151578063c89e4361146101a8578063ca5eb5e1146101ff578063cc1d4c0214610242575b600080fd5b34801561009457600080fd5b506100c9600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061029d565b005b3480156100d757600080fd5b5061010c600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103b6565b005b34801561011a57600080fd5b5061014f600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104b2565b005b34801561015d57600080fd5b5061016661060c565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101b457600080fd5b506101bd610631565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561020b57600080fd5b50610240600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610657565b005b34801561024e57600080fd5b50610283600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106f6565b604051808215151515815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156102f857600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f70aea8d848e8a90fb7661b227dc522eb6395c3dac71b63cb59edd5c9899b236460405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561041257600080fd5b60018060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160006101000a81548160ff0219169083151502179055508073ffffffffffffffffffffffffffffffffffffffff167fd415b905d4dd806bfba99a7a0e6351bd0c9db3a9912add21c0e6bef4479f673f60405160405180910390a250565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561050e57600080fd5b80600160008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160009054906101000a900460ff16151561056a57600080fd5b6000600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160006101000a81548160ff0219169083151502179055508173ffffffffffffffffffffffffffffffffffffffff167fb6fa8b8bd5eab60f292eca876e3ef90722275b785309d84b1de113ce0b8c4e7460405160405180910390a25050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156106b257600080fd5b80600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160009054906101000a900460ff1690509190505600a165627a7a723058200164cf4dd7bbc485507ff55ea2c34ad0cecd880082724000678d8f75103a446a0029",
+  "deployedBytecode": "0x608060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806313af40351461008857806314253887146100cb57806374a8f1031461010e5780638da5cb5b14610151578063c89e4361146101a8578063ca5eb5e1146101ff578063cc1d4c0214610242575b600080fd5b34801561009457600080fd5b506100c9600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061029d565b005b3480156100d757600080fd5b5061010c600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103b6565b005b34801561011a57600080fd5b5061014f600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104b2565b005b34801561015d57600080fd5b5061016661060c565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101b457600080fd5b506101bd610631565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561020b57600080fd5b50610240600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610657565b005b34801561024e57600080fd5b50610283600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106f6565b604051808215151515815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156102f857600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f70aea8d848e8a90fb7661b227dc522eb6395c3dac71b63cb59edd5c9899b236460405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561041257600080fd5b60018060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160006101000a81548160ff0219169083151502179055508073ffffffffffffffffffffffffffffffffffffffff167fd415b905d4dd806bfba99a7a0e6351bd0c9db3a9912add21c0e6bef4479f673f60405160405180910390a250565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561050e57600080fd5b80600160008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160009054906101000a900460ff16151561056a57600080fd5b6000600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160006101000a81548160ff0219169083151502179055508173ffffffffffffffffffffffffffffffffffffffff167fb6fa8b8bd5eab60f292eca876e3ef90722275b785309d84b1de113ce0b8c4e7460405160405180910390a25050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156106b257600080fd5b80600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160009054906101000a900460ff1690509190505600a165627a7a723058200164cf4dd7bbc485507ff55ea2c34ad0cecd880082724000678d8f75103a446a0029",
+  "sourceMap": "770:840:6:-;;;787:10:4;764:33;;;;;;;;;;;;;;;;;;;;1002:10:6;976:36;;;;;;;;;;;;;;;;;;;;770:840;8:9:-1;5:2;;;30:1;27;20:12;5:2;770:840:6;;;;;;;",
+  "deployedSourceMap": "770:840:6:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;864:106:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;864:106:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;1165:115:6;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1165:115:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;1283:135;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1283:135:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;764:33:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;764:33:4;;;;;;;;;;;;;;;;;;;;;;;;;;;976:36:6;;8:9:-1;5:2;;;30:1;27;20:12;5:2;976:36:6;;;;;;;;;;;;;;;;;;;;;;;;;;;1421:82;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1421:82:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;1506:102;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1506:102:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;864:106:4;846:5;;;;;;;;;;;832:19;;:10;:19;;;824:28;;;;;;;;945:4;929:21;;938:5;;;;;;;;;;;929:21;;;;;;;;;;;;962:4;954:5;;:12;;;;;;;;;;;;;;;;;;864:106;:::o;1165:115:6:-;1064:8;;;;;;;;;;;1050:22;;:10;:22;;;1042:31;;;;;;;;1248:4;1227:5;:11;1233:4;1227:11;;;;;;;;;;;;;;;:18;;;:25;;;;;;;;;;;;;;;;;;1271:4;1261:15;;;;;;;;;;;;1165:115;:::o;1283:135::-;1064:8;;;;;;;;;;;1050:22;;:10;:22;;;1042:31;;;;;;;;1355:4;1134:5;:11;1140:4;1134:11;;;;;;;;;;;;;;;:18;;;;;;;;;;;;1126:27;;;;;;;;1387:5;1366;:11;1372:4;1366:11;;;;;;;;;;;;;;;:18;;;:26;;;;;;;;;;;;;;;;;;1409:4;1401:13;;;;;;;;;;;;1077:1;1283:135;:::o;764:33:4:-;;;;;;;;;;;;;:::o;976:36:6:-;;;;;;;;;;;;;:::o;1421:82::-;846:5:4;;;;;;;;;;;832:19;;:10;:19;;;824:28;;;;;;;;1495:4:6;1484:8;;:15;;;;;;;;;;;;;;;;;;1421:82;:::o;1506:102::-;1568:4;1586:5;:11;1592:4;1586:11;;;;;;;;;;;;;;;:18;;;;;;;;;;;;1579:25;;1506:102;;;:::o",
+  "source": "//! The SimpleCertifier contract, used by service transaction.\n//!\n//! Copyright 2016 Gavin Wood, Parity Technologies Ltd.\n//!\n//! Licensed under the Apache License, Version 2.0 (the \"License\");\n//! you may not use this file except in compliance with the License.\n//! You may obtain a copy of the License at\n//!\n//!     http://www.apache.org/licenses/LICENSE-2.0\n//!\n//! Unless required by applicable law or agreed to in writing, software\n//! distributed under the License is distributed on an \"AS IS\" BASIS,\n//! WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n//! See the License for the specific language governing permissions and\n//! limitations under the License.\n\npragma solidity ^0.4.24;\n\nimport \"./Certifier.sol\";\nimport \"./Owned.sol\";\n\n\ncontract SimpleCertifier is Owned, Certifier {\n\tstruct Certification {\n\t\tbool active;\n\t}\n\n\tmapping (address => Certification) certs;\n\n\t// So that the server posting puzzles doesn't have access to the ETH.\n\taddress public delegate = msg.sender;\n\n\tmodifier onlyDelegate {\n\t\trequire(msg.sender == delegate);\n\t\t_;\n\t}\n\n\tmodifier onlyCertified(address _who) {\n\t\trequire(certs[_who].active);\n\t\t_;\n\t}\n\n\tfunction certify(address _who)\n\t\texternal\n\t\tonlyDelegate\n\t{\n\t\tcerts[_who].active = true;\n\t\temit Confirmed(_who);\n\t}\n\n\tfunction revoke(address _who)\n\t\texternal\n\t\tonlyDelegate\n\t\tonlyCertified(_who)\n\t{\n\t\tcerts[_who].active = false;\n\t\temit Revoked(_who);\n\t}\n\n\tfunction setDelegate(address _new)\n\t\texternal\n\t\tonlyOwner\n\t{\n\t\tdelegate = _new;\n\t}\n\n\tfunction certified(address _who)\n\t\texternal\n\t\tview\n\t\treturns (bool)\n\t{\n\t\treturn certs[_who].active;\n\t}\n}\n",
+  "sourcePath": "/home/ubuntu/name-registry/contracts/SimpleCertifier.sol",
+  "ast": {
+    "absolutePath": "/home/ubuntu/name-registry/contracts/SimpleCertifier.sol",
+    "exportedSymbols": {
+      "SimpleCertifier": [
+        1309
+      ]
+    },
+    "id": 1310,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1201,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "694:24:6"
+      },
+      {
+        "absolutePath": "/home/ubuntu/name-registry/contracts/Certifier.sol",
+        "file": "./Certifier.sol",
+        "id": 1202,
+        "nodeType": "ImportDirective",
+        "scope": 1310,
+        "sourceUnit": 1001,
+        "src": "720:25:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/ubuntu/name-registry/contracts/Owned.sol",
+        "file": "./Owned.sol",
+        "id": 1203,
+        "nodeType": "ImportDirective",
+        "scope": 1310,
+        "sourceUnit": 1093,
+        "src": "746:21:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1204,
+              "name": "Owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1092,
+              "src": "798:5:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Owned_$1092",
+                "typeString": "contract Owned"
+              }
+            },
+            "id": 1205,
+            "nodeType": "InheritanceSpecifier",
+            "src": "798:5:6"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1206,
+              "name": "Certifier",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1000,
+              "src": "805:9:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Certifier_$1000",
+                "typeString": "contract Certifier"
+              }
+            },
+            "id": 1207,
+            "nodeType": "InheritanceSpecifier",
+            "src": "805:9:6"
+          }
+        ],
+        "contractDependencies": [
+          1000,
+          1092
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1309,
+        "linearizedBaseContracts": [
+          1309,
+          1000,
+          1092
+        ],
+        "name": "SimpleCertifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "SimpleCertifier.Certification",
+            "id": 1210,
+            "members": [
+              {
+                "constant": false,
+                "id": 1209,
+                "name": "active",
+                "nodeType": "VariableDeclaration",
+                "scope": 1210,
+                "src": "843:11:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1208,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "843:4:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Certification",
+            "nodeType": "StructDefinition",
+            "scope": 1309,
+            "src": "818:40:6",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1214,
+            "name": "certs",
+            "nodeType": "VariableDeclaration",
+            "scope": 1309,
+            "src": "861:40:6",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Certification_$1210_storage_$",
+              "typeString": "mapping(address => struct SimpleCertifier.Certification)"
+            },
+            "typeName": {
+              "id": 1213,
+              "keyType": {
+                "id": 1211,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "870:7:6",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "861:34:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Certification_$1210_storage_$",
+                "typeString": "mapping(address => struct SimpleCertifier.Certification)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 1212,
+                "name": "Certification",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 1210,
+                "src": "881:13:6",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Certification_$1210_storage_ptr",
+                  "typeString": "struct SimpleCertifier.Certification"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1218,
+            "name": "delegate",
+            "nodeType": "VariableDeclaration",
+            "scope": 1309,
+            "src": "976:36:6",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1215,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "976:7:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "expression": {
+                "argumentTypes": null,
+                "id": 1216,
+                "name": "msg",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 2112,
+                "src": "1002:3:6",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_magic_message",
+                  "typeString": "msg"
+                }
+              },
+              "id": 1217,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": false,
+              "lValueRequested": false,
+              "memberName": "sender",
+              "nodeType": "MemberAccess",
+              "referencedDeclaration": null,
+              "src": "1002:10:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1228,
+              "nodeType": "Block",
+              "src": "1038:44:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 1224,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 1221,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2112,
+                            "src": "1050:3:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 1222,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1050:10:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 1223,
+                          "name": "delegate",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1218,
+                          "src": "1064:8:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "1050:22:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 1220,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2115,
+                        2116
+                      ],
+                      "referencedDeclaration": 2115,
+                      "src": "1042:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 1225,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1042:31:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1226,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1042:31:6"
+                },
+                {
+                  "id": 1227,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1077:1:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1229,
+            "name": "onlyDelegate",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 1219,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1038:0:6"
+            },
+            "src": "1016:66:6",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1241,
+              "nodeType": "Block",
+              "src": "1122:40:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 1234,
+                            "name": "certs",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1214,
+                            "src": "1134:5:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Certification_$1210_storage_$",
+                              "typeString": "mapping(address => struct SimpleCertifier.Certification storage ref)"
+                            }
+                          },
+                          "id": 1236,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 1235,
+                            "name": "_who",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1231,
+                            "src": "1140:4:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1134:11:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Certification_$1210_storage",
+                            "typeString": "struct SimpleCertifier.Certification storage ref"
+                          }
+                        },
+                        "id": 1237,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "active",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1209,
+                        "src": "1134:18:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 1233,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2115,
+                        2116
+                      ],
+                      "referencedDeclaration": 2115,
+                      "src": "1126:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 1238,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1126:27:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1239,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1126:27:6"
+                },
+                {
+                  "id": 1240,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1157:1:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1242,
+            "name": "onlyCertified",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 1232,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1231,
+                  "name": "_who",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1242,
+                  "src": "1108:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1230,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1108:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1107:14:6"
+            },
+            "src": "1085:77:6",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1260,
+              "nodeType": "Block",
+              "src": "1223:57:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1254,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 1249,
+                          "name": "certs",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1214,
+                          "src": "1227:5:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Certification_$1210_storage_$",
+                            "typeString": "mapping(address => struct SimpleCertifier.Certification storage ref)"
+                          }
+                        },
+                        "id": 1251,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 1250,
+                          "name": "_who",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1244,
+                          "src": "1233:4:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1227:11:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Certification_$1210_storage",
+                          "typeString": "struct SimpleCertifier.Certification storage ref"
+                        }
+                      },
+                      "id": 1252,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "active",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1209,
+                      "src": "1227:18:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 1253,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1248:4:6",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1227:25:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1255,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1227:25:6"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1257,
+                        "name": "_who",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1244,
+                        "src": "1271:4:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1256,
+                      "name": "Confirmed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 988,
+                      "src": "1261:9:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 1258,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1261:15:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1259,
+                  "nodeType": "EmitStatement",
+                  "src": "1256:20:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1261,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 1247,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1246,
+                  "name": "onlyDelegate",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1229,
+                  "src": "1209:12:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1209:12:6"
+              }
+            ],
+            "name": "certify",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1245,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1244,
+                  "name": "_who",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1261,
+                  "src": "1182:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1243,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1182:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1181:14:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1248,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1223:0:6"
+            },
+            "scope": 1309,
+            "src": "1165:115:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1282,
+              "nodeType": "Block",
+              "src": "1362:56:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1276,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 1271,
+                          "name": "certs",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1214,
+                          "src": "1366:5:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Certification_$1210_storage_$",
+                            "typeString": "mapping(address => struct SimpleCertifier.Certification storage ref)"
+                          }
+                        },
+                        "id": 1273,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 1272,
+                          "name": "_who",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1263,
+                          "src": "1372:4:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1366:11:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Certification_$1210_storage",
+                          "typeString": "struct SimpleCertifier.Certification storage ref"
+                        }
+                      },
+                      "id": 1274,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "active",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1209,
+                      "src": "1366:18:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 1275,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1387:5:6",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "1366:26:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1277,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1366:26:6"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1279,
+                        "name": "_who",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1263,
+                        "src": "1409:4:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1278,
+                      "name": "Revoked",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 992,
+                      "src": "1401:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 1280,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1401:13:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1281,
+                  "nodeType": "EmitStatement",
+                  "src": "1396:18:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1283,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 1266,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1265,
+                  "name": "onlyDelegate",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1229,
+                  "src": "1326:12:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1326:12:6"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1268,
+                    "name": "_who",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1263,
+                    "src": "1355:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 1269,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1267,
+                  "name": "onlyCertified",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1242,
+                  "src": "1341:13:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_address_$",
+                    "typeString": "modifier (address)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1341:19:6"
+              }
+            ],
+            "name": "revoke",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1264,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1263,
+                  "name": "_who",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1283,
+                  "src": "1299:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1262,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1299:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1298:14:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1270,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1362:0:6"
+            },
+            "scope": 1309,
+            "src": "1283:135:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1294,
+              "nodeType": "Block",
+              "src": "1480:23:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1292,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1290,
+                      "name": "delegate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1218,
+                      "src": "1484:8:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1291,
+                      "name": "_new",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1285,
+                      "src": "1495:4:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1484:15:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 1293,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1484:15:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1295,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 1288,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1287,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1074,
+                  "src": "1469:9:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1469:9:6"
+              }
+            ],
+            "name": "setDelegate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1286,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1285,
+                  "name": "_new",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1295,
+                  "src": "1442:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1284,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1442:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1441:14:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1289,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1480:0:6"
+            },
+            "scope": 1309,
+            "src": "1421:82:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1307,
+              "nodeType": "Block",
+              "src": "1575:33:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1302,
+                        "name": "certs",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1214,
+                        "src": "1586:5:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Certification_$1210_storage_$",
+                          "typeString": "mapping(address => struct SimpleCertifier.Certification storage ref)"
+                        }
+                      },
+                      "id": 1304,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1303,
+                        "name": "_who",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1297,
+                        "src": "1592:4:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1586:11:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Certification_$1210_storage",
+                        "typeString": "struct SimpleCertifier.Certification storage ref"
+                      }
+                    },
+                    "id": 1305,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "active",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 1209,
+                    "src": "1586:18:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1301,
+                  "id": 1306,
+                  "nodeType": "Return",
+                  "src": "1579:25:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1308,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "certified",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1298,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1297,
+                  "name": "_who",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1308,
+                  "src": "1525:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1296,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1525:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1524:14:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1301,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1300,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1308,
+                  "src": "1568:4:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1299,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1568:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1567:6:6"
+            },
+            "scope": 1309,
+            "src": "1506:102:6",
+            "stateMutability": "view",
+            "superFunction": 999,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1310,
+        "src": "770:840:6"
+      }
+    ],
+    "src": "694:917:6"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/ubuntu/name-registry/contracts/SimpleCertifier.sol",
+    "exportedSymbols": {
+      "SimpleCertifier": [
+        1309
+      ]
+    },
+    "id": 1310,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1201,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "694:24:6"
+      },
+      {
+        "absolutePath": "/home/ubuntu/name-registry/contracts/Certifier.sol",
+        "file": "./Certifier.sol",
+        "id": 1202,
+        "nodeType": "ImportDirective",
+        "scope": 1310,
+        "sourceUnit": 1001,
+        "src": "720:25:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/ubuntu/name-registry/contracts/Owned.sol",
+        "file": "./Owned.sol",
+        "id": 1203,
+        "nodeType": "ImportDirective",
+        "scope": 1310,
+        "sourceUnit": 1093,
+        "src": "746:21:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1204,
+              "name": "Owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1092,
+              "src": "798:5:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Owned_$1092",
+                "typeString": "contract Owned"
+              }
+            },
+            "id": 1205,
+            "nodeType": "InheritanceSpecifier",
+            "src": "798:5:6"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1206,
+              "name": "Certifier",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1000,
+              "src": "805:9:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Certifier_$1000",
+                "typeString": "contract Certifier"
+              }
+            },
+            "id": 1207,
+            "nodeType": "InheritanceSpecifier",
+            "src": "805:9:6"
+          }
+        ],
+        "contractDependencies": [
+          1000,
+          1092
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1309,
+        "linearizedBaseContracts": [
+          1309,
+          1000,
+          1092
+        ],
+        "name": "SimpleCertifier",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "SimpleCertifier.Certification",
+            "id": 1210,
+            "members": [
+              {
+                "constant": false,
+                "id": 1209,
+                "name": "active",
+                "nodeType": "VariableDeclaration",
+                "scope": 1210,
+                "src": "843:11:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 1208,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "843:4:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Certification",
+            "nodeType": "StructDefinition",
+            "scope": 1309,
+            "src": "818:40:6",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1214,
+            "name": "certs",
+            "nodeType": "VariableDeclaration",
+            "scope": 1309,
+            "src": "861:40:6",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Certification_$1210_storage_$",
+              "typeString": "mapping(address => struct SimpleCertifier.Certification)"
+            },
+            "typeName": {
+              "id": 1213,
+              "keyType": {
+                "id": 1211,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "870:7:6",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "861:34:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Certification_$1210_storage_$",
+                "typeString": "mapping(address => struct SimpleCertifier.Certification)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 1212,
+                "name": "Certification",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 1210,
+                "src": "881:13:6",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Certification_$1210_storage_ptr",
+                  "typeString": "struct SimpleCertifier.Certification"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1218,
+            "name": "delegate",
+            "nodeType": "VariableDeclaration",
+            "scope": 1309,
+            "src": "976:36:6",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1215,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "976:7:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "expression": {
+                "argumentTypes": null,
+                "id": 1216,
+                "name": "msg",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 2112,
+                "src": "1002:3:6",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_magic_message",
+                  "typeString": "msg"
+                }
+              },
+              "id": 1217,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": false,
+              "lValueRequested": false,
+              "memberName": "sender",
+              "nodeType": "MemberAccess",
+              "referencedDeclaration": null,
+              "src": "1002:10:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1228,
+              "nodeType": "Block",
+              "src": "1038:44:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 1224,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 1221,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 2112,
+                            "src": "1050:3:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 1222,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1050:10:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 1223,
+                          "name": "delegate",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1218,
+                          "src": "1064:8:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "1050:22:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 1220,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2115,
+                        2116
+                      ],
+                      "referencedDeclaration": 2115,
+                      "src": "1042:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 1225,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1042:31:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1226,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1042:31:6"
+                },
+                {
+                  "id": 1227,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1077:1:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1229,
+            "name": "onlyDelegate",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 1219,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1038:0:6"
+            },
+            "src": "1016:66:6",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1241,
+              "nodeType": "Block",
+              "src": "1122:40:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 1234,
+                            "name": "certs",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1214,
+                            "src": "1134:5:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Certification_$1210_storage_$",
+                              "typeString": "mapping(address => struct SimpleCertifier.Certification storage ref)"
+                            }
+                          },
+                          "id": 1236,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 1235,
+                            "name": "_who",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1231,
+                            "src": "1140:4:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1134:11:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Certification_$1210_storage",
+                            "typeString": "struct SimpleCertifier.Certification storage ref"
+                          }
+                        },
+                        "id": 1237,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "active",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1209,
+                        "src": "1134:18:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 1233,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2115,
+                        2116
+                      ],
+                      "referencedDeclaration": 2115,
+                      "src": "1126:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 1238,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1126:27:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1239,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1126:27:6"
+                },
+                {
+                  "id": 1240,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1157:1:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1242,
+            "name": "onlyCertified",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 1232,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1231,
+                  "name": "_who",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1242,
+                  "src": "1108:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1230,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1108:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1107:14:6"
+            },
+            "src": "1085:77:6",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1260,
+              "nodeType": "Block",
+              "src": "1223:57:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1254,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 1249,
+                          "name": "certs",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1214,
+                          "src": "1227:5:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Certification_$1210_storage_$",
+                            "typeString": "mapping(address => struct SimpleCertifier.Certification storage ref)"
+                          }
+                        },
+                        "id": 1251,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 1250,
+                          "name": "_who",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1244,
+                          "src": "1233:4:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1227:11:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Certification_$1210_storage",
+                          "typeString": "struct SimpleCertifier.Certification storage ref"
+                        }
+                      },
+                      "id": 1252,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "active",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1209,
+                      "src": "1227:18:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 1253,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1248:4:6",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1227:25:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1255,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1227:25:6"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1257,
+                        "name": "_who",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1244,
+                        "src": "1271:4:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1256,
+                      "name": "Confirmed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 988,
+                      "src": "1261:9:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 1258,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1261:15:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1259,
+                  "nodeType": "EmitStatement",
+                  "src": "1256:20:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1261,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 1247,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1246,
+                  "name": "onlyDelegate",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1229,
+                  "src": "1209:12:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1209:12:6"
+              }
+            ],
+            "name": "certify",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1245,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1244,
+                  "name": "_who",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1261,
+                  "src": "1182:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1243,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1182:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1181:14:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1248,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1223:0:6"
+            },
+            "scope": 1309,
+            "src": "1165:115:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1282,
+              "nodeType": "Block",
+              "src": "1362:56:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1276,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 1271,
+                          "name": "certs",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1214,
+                          "src": "1366:5:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Certification_$1210_storage_$",
+                            "typeString": "mapping(address => struct SimpleCertifier.Certification storage ref)"
+                          }
+                        },
+                        "id": 1273,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 1272,
+                          "name": "_who",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1263,
+                          "src": "1372:4:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1366:11:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Certification_$1210_storage",
+                          "typeString": "struct SimpleCertifier.Certification storage ref"
+                        }
+                      },
+                      "id": 1274,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "active",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1209,
+                      "src": "1366:18:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 1275,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1387:5:6",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "1366:26:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1277,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1366:26:6"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1279,
+                        "name": "_who",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1263,
+                        "src": "1409:4:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1278,
+                      "name": "Revoked",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 992,
+                      "src": "1401:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 1280,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1401:13:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1281,
+                  "nodeType": "EmitStatement",
+                  "src": "1396:18:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1283,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 1266,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1265,
+                  "name": "onlyDelegate",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1229,
+                  "src": "1326:12:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1326:12:6"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1268,
+                    "name": "_who",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1263,
+                    "src": "1355:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 1269,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1267,
+                  "name": "onlyCertified",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1242,
+                  "src": "1341:13:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_address_$",
+                    "typeString": "modifier (address)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1341:19:6"
+              }
+            ],
+            "name": "revoke",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1264,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1263,
+                  "name": "_who",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1283,
+                  "src": "1299:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1262,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1299:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1298:14:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1270,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1362:0:6"
+            },
+            "scope": 1309,
+            "src": "1283:135:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1294,
+              "nodeType": "Block",
+              "src": "1480:23:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1292,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1290,
+                      "name": "delegate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1218,
+                      "src": "1484:8:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1291,
+                      "name": "_new",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1285,
+                      "src": "1495:4:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1484:15:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 1293,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1484:15:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1295,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 1288,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1287,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1074,
+                  "src": "1469:9:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1469:9:6"
+              }
+            ],
+            "name": "setDelegate",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1286,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1285,
+                  "name": "_new",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1295,
+                  "src": "1442:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1284,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1442:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1441:14:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1289,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1480:0:6"
+            },
+            "scope": 1309,
+            "src": "1421:82:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 1307,
+              "nodeType": "Block",
+              "src": "1575:33:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1302,
+                        "name": "certs",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1214,
+                        "src": "1586:5:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Certification_$1210_storage_$",
+                          "typeString": "mapping(address => struct SimpleCertifier.Certification storage ref)"
+                        }
+                      },
+                      "id": 1304,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1303,
+                        "name": "_who",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1297,
+                        "src": "1592:4:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1586:11:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Certification_$1210_storage",
+                        "typeString": "struct SimpleCertifier.Certification storage ref"
+                      }
+                    },
+                    "id": 1305,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "active",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 1209,
+                    "src": "1586:18:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 1301,
+                  "id": 1306,
+                  "nodeType": "Return",
+                  "src": "1579:25:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1308,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "certified",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1298,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1297,
+                  "name": "_who",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1308,
+                  "src": "1525:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1296,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1525:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1524:14:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1301,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1300,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1308,
+                  "src": "1568:4:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1299,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1568:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1567:6:6"
+            },
+            "scope": 1309,
+            "src": "1506:102:6",
+            "stateMutability": "view",
+            "superFunction": 999,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1310,
+        "src": "770:840:6"
+      }
+    ],
+    "src": "694:917:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.26+commit.4563c3fc.Emscripten.clang"
+  },
+  "networks": {
+    "134": {
+      "events": {},
+      "links": {},
+      "address": "0x37aede5ba88712393fb8709c3bc8bb3e55233f31",
+      "transactionHash": "0xc97a4cff07ae3469637039fbd2fb1c11ceccc879f21642e70e4c835984b48e1d"
+    }
+  },
+  "schemaVersion": "2.0.3",
+  "updatedAt": "2019-09-26T14:48:56.447Z"
+}
